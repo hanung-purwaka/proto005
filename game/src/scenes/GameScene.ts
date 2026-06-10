@@ -736,6 +736,7 @@ export class GameScene extends Phaser.Scene {
 
   private buildIconButton(x: number, y: number, onPress: () => void): Phaser.GameObjects.Container {
     const container = this.add.container(x, y);
+    const visuals = this.add.container(0, 0);
     const button = this.add.image(0, 0, UI_TEXTURE_KEYS.buttonSquare);
     button.setDisplaySize(
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.buttonSquare].width,
@@ -748,7 +749,8 @@ export class GameScene extends Phaser.Scene {
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.resetIcon].height,
     );
 
-    container.add([button, icon]);
+    visuals.add([button, icon]);
+    container.add(visuals);
     container.setSize(
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.buttonSquare].width,
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.buttonSquare].height,
@@ -762,18 +764,19 @@ export class GameScene extends Phaser.Scene {
       ),
       Phaser.Geom.Rectangle.Contains,
     );
-    container.on('pointerdown', () => container.setY(y + 2));
-    container.on('pointerup', () => {
-      container.setY(y);
+    container.on('pointerdown', () => {
+      visuals.setY(2);
       onPress();
     });
-    container.on('pointerout', () => container.setY(y));
+    container.on('pointerup', () => visuals.setY(0));
+    container.on('pointerout', () => visuals.setY(0));
 
     return container;
   }
 
   private buildWideButton(x: number, y: number, label: string, onPress: () => void): Phaser.GameObjects.Container {
     const container = this.add.container(x, y);
+    const visuals = this.add.container(0, 0);
     const button = this.add.image(0, 0, UI_TEXTURE_KEYS.buttonWide);
     button.setDisplaySize(
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.buttonWide].width,
@@ -787,7 +790,8 @@ export class GameScene extends Phaser.Scene {
       color: '#5c4735',
     }).setOrigin(0.5);
 
-    container.add([button, text]);
+    visuals.add([button, text]);
+    container.add(visuals);
     container.setSize(
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.buttonWide].width,
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.buttonWide].height,
@@ -801,12 +805,12 @@ export class GameScene extends Phaser.Scene {
       ),
       Phaser.Geom.Rectangle.Contains,
     );
-    container.on('pointerdown', () => container.setY(y + 2));
-    container.on('pointerup', () => {
-      container.setY(y);
+    container.on('pointerdown', () => {
+      visuals.setY(2);
       onPress();
     });
-    container.on('pointerout', () => container.setY(y));
+    container.on('pointerup', () => visuals.setY(0));
+    container.on('pointerout', () => visuals.setY(0));
 
     return container;
   }
