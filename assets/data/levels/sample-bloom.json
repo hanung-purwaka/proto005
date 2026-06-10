@@ -1,0 +1,188 @@
+{
+  "id": "sample-bloom",
+  "image": "joojaebum-11",
+  "grid": {
+    "rows": 6,
+    "cols": 6
+  },
+  "pieces": [
+    {
+      "id": "petal-a",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "solvedOrigin": [
+        1,
+        1
+      ],
+      "startOrigin": [
+        0,
+        0
+      ],
+      "thickness": 18
+    },
+    {
+      "id": "petal-b",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "solvedOrigin": [
+        1,
+        3
+      ],
+      "startOrigin": [
+        0,
+        4
+      ],
+      "thickness": 16
+    },
+    {
+      "id": "petal-c",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "solvedOrigin": [
+        2,
+        2
+      ],
+      "startOrigin": [
+        0,
+        2
+      ],
+      "thickness": 14
+    },
+    {
+      "id": "stem-a",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "solvedOrigin": [
+        3,
+        1
+      ],
+      "startOrigin": [
+        2,
+        0
+      ],
+      "thickness": 20
+    },
+    {
+      "id": "stem-b",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "solvedOrigin": [
+        3,
+        3
+      ],
+      "startOrigin": [
+        2,
+        4
+      ],
+      "thickness": 18
+    },
+    {
+      "id": "leaf-a",
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "solvedOrigin": [
+        4,
+        3
+      ],
+      "startOrigin": [
+        4,
+        2
+      ],
+      "thickness": 22
+    },
+    {
+      "id": "leaf-b",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "solvedOrigin": [
+        5,
+        1
+      ],
+      "startOrigin": [
+        4,
+        0
+      ],
+      "thickness": 16
+    }
+  ]
+}
