@@ -3,7 +3,7 @@ import type { CompiledLevelData, CompiledPieceData } from '@shared/puzzle';
 import type { DragAxis } from './runtimeTypes';
 
 export const PIECE_FACE_RADIUS = 16;
-export const PIECE_FACE_INSET = 0.5;
+export const PIECE_FACE_INSET = 1;
 
 interface CellHitArea {
   cells: Array<{ row: number; col: number }>;
@@ -30,6 +30,12 @@ interface CellProfile {
   joinedRight: boolean;
 }
 
+type ConcaveCorner = {
+  x: number;
+  y: number;
+  missing: 'tl' | 'tr' | 'bl' | 'br';
+};
+
 export class PieceView {
   readonly container: Phaser.GameObjects.Container;
 
@@ -41,6 +47,11 @@ export class PieceView {
   private static readonly FACE_INSET = PIECE_FACE_INSET;
   private static readonly FACE_JOIN_OVERLAP = 3;
   private static readonly IMAGE_JOIN_BLEED = 2;
+  private static readonly CONCAVE_TRIM_SIZE = PieceView.FACE_JOIN_OVERLAP + PieceView.IMAGE_JOIN_BLEED + 4;
+  private static readonly UNDERLAY_CONCAVE_TRIM = PieceView.CONCAVE_TRIM_SIZE;
+  private static readonly UNDERLAY_JOIN_OVERLAP = 1;
+  private static readonly DRAG_FACE_LIFT_Y = 4;
+  private static readonly DRAG_UNDERLAY_LIFT_Y = 2;
 
   private readonly hitWidth: number;
   private readonly hitHeight: number;
@@ -48,8 +59,12 @@ export class PieceView {
   private readonly originOffsetY: number;
   private readonly underlayContainer: Phaser.GameObjects.Container;
   private readonly visuals: Phaser.GameObjects.Container;
+  private readonly shellContainer: Phaser.GameObjects.Container;
   private readonly faceContainer: Phaser.GameObjects.Container;
+  private readonly underlayTextureKey: string;
+  private readonly shellTextureKey: string;
   private readonly faceTextureKey: string;
+  private isDragging = false;
 
   constructor(
     private readonly scene: Phaser.Scene,
@@ -63,11 +78,15 @@ export class PieceView {
     this.hitHeight = piece.height * cellSize;
     this.originOffsetX = -this.hitWidth / 2;
     this.originOffsetY = -this.hitHeight / 2;
+    this.underlayTextureKey = `piece-underlay:${level.id}:${piece.id}`;
+    this.shellTextureKey = `piece-shell:${level.id}:${piece.id}`;
     this.faceTextureKey = `piece-face:${level.id}:${piece.id}`;
     this.underlayContainer = scene.add.container(0, 0);
     this.visuals = scene.add.container(0, 0);
+    this.shellContainer = scene.add.container(0, 0);
     this.faceContainer = scene.add.container(0, 0);
 
+    this.visuals.add(this.shellContainer);
     this.visuals.add(this.faceContainer);
     this.container.add(this.visuals);
     this.underlayContainer.setDepth(4);
@@ -88,7 +107,10 @@ export class PieceView {
   setGridPosition(x: number, y: number): void {
     const centerX = x + this.hitWidth / 2;
     const centerY = y + this.hitHeight / 2;
-    this.underlayContainer.setPosition(centerX, centerY);
+    this.underlayContainer.setPosition(
+      centerX,
+      centerY - (this.isDragging ? PieceView.DRAG_UNDERLAY_LIFT_Y : 0),
+    );
     this.container.setPosition(centerX, centerY);
   }
 
@@ -99,10 +121,12 @@ export class PieceView {
   }
 
   setDragging(isDragging: boolean): void {
+    this.isDragging = isDragging;
     this.underlayContainer.setDepth(isDragging ? 8 : 4);
     this.container.setDepth(isDragging ? 40 : 12);
     this.visuals.setScale(isDragging ? 1.016 : 1);
-    this.visuals.setY(isDragging ? -4 : 0);
+    this.visuals.setY(isDragging ? -PieceView.DRAG_FACE_LIFT_Y : 0);
+    this.underlayContainer.setY(this.container.y - (isDragging ? PieceView.DRAG_UNDERLAY_LIFT_Y : 0));
     this.visuals.setAlpha(1);
   }
 
@@ -115,9 +139,20 @@ export class PieceView {
     const targetY = y + this.hitHeight / 2;
 
     this.scene.tweens.add({
-      targets: [this.container, this.underlayContainer],
+      targets: this.container,
       x: targetX,
       y: targetY,
+      duration,
+      ease:
+        Phaser.Math.Distance.Between(this.container.x, this.container.y, targetX, targetY) < 6
+          ? 'Sine.Out'
+          : 'Back.Out',
+    });
+
+    this.scene.tweens.add({
+      targets: this.underlayContainer,
+      x: targetX,
+      y: targetY - (this.isDragging ? PieceView.DRAG_UNDERLAY_LIFT_Y : 0),
       duration,
       ease:
         Phaser.Math.Distance.Between(this.container.x, this.container.y, targetX, targetY) < 6
@@ -129,27 +164,27 @@ export class PieceView {
 
   refreshSurface(pieceRow: number, pieceCol: number, getOccupant: OccupancyLookup): void {
     this.underlayContainer.removeAll(true);
-
-    for (const child of [...this.visuals.list]) {
-      if (child !== this.faceContainer) {
-        child.destroy();
-      }
-    }
-
+    this.shellContainer.removeAll(true);
     this.faceContainer.removeAll(true);
 
     const profiles = this.buildCellProfiles(pieceRow, pieceCol, getOccupant);
-    this.buildShadow(profiles);
-    this.buildDepth(profiles);
-    this.buildSideWalls(profiles);
+    this.buildUnderlay(profiles);
+    this.buildShell(profiles);
     this.buildFace(profiles);
-    this.buildEdgeLines(profiles);
     this.visuals.bringToTop(this.faceContainer);
   }
 
   destroy(): void {
+    if (this.scene.textures.exists(this.underlayTextureKey)) {
+      this.scene.textures.remove(this.underlayTextureKey);
+    }
+
     if (this.scene.textures.exists(this.faceTextureKey)) {
       this.scene.textures.remove(this.faceTextureKey);
+    }
+
+    if (this.scene.textures.exists(this.shellTextureKey)) {
+      this.scene.textures.remove(this.shellTextureKey);
     }
 
     this.underlayContainer.destroy(true);
@@ -199,66 +234,29 @@ export class PieceView {
     return profiles;
   }
 
-  private buildShadow(profiles: CellProfile[]): void {
-    const shadow = this.scene.add.graphics();
-    shadow.fillStyle(0x000000, 1);
-
-    for (const profile of profiles) {
-      const rect = this.getJoinedRect(profile, 0, PieceView.DEPTH_Y + 2, 0, 7, 0);
-
-      shadow.fillRoundedRect(
-        rect.x,
-        rect.y,
-        rect.width,
-        rect.height,
-        rect.radius,
-      );
+  private buildUnderlay(profiles: CellProfile[]): void {
+    if (this.scene.textures.exists(this.underlayTextureKey)) {
+      this.scene.textures.remove(this.underlayTextureKey);
     }
 
-    this.underlayContainer.add(shadow);
-  }
+    const textureHeight = this.hitHeight + PieceView.DEPTH_Y + 2;
+    const underlayTexture = this.scene.textures.createCanvas(this.underlayTextureKey, this.hitWidth, textureHeight);
 
-  private buildDepth(profiles: CellProfile[]): void {
-    const body = this.scene.add.graphics();
-    body.fillStyle(0x000000, 1);
-    this.drawJoinedFills(body, profiles, 0, PieceView.DEPTH_Y - 1, -1, 0);
-
-    const bodyShade = this.scene.add.graphics();
-    bodyShade.fillStyle(0x000000, 1);
-    this.drawJoinedFills(bodyShade, profiles, 0, PieceView.DEPTH_Y + 1, -2, -1);
-
-    this.underlayContainer.add([body, bodyShade]);
-  }
-
-  private buildSideWalls(profiles: CellProfile[]): void {
-    const bottomWall = this.scene.add.graphics();
-    bottomWall.fillStyle(0x000000, 1);
-
-    for (const profile of profiles) {
-      const x = this.originOffsetX + profile.col * this.cellSize + PieceView.FACE_INSET;
-      const y = this.originOffsetY + profile.row * this.cellSize + PieceView.FACE_INSET;
-      const faceSize = this.cellSize - PieceView.FACE_INSET * 2;
-      const radius = PieceView.FACE_RADIUS - 4;
-      const bottomInset = profile.openBottom ? radius - 2 : 6;
-      const leftInset = profile.openLeft ? radius - 2 : 6;
-      const rightInset = profile.openRight ? radius - 2 : 6;
-
-      if (profile.openBottom) {
-        this.fillQuad(
-          bottomWall,
-          x + leftInset,
-          y + faceSize - 1,
-          x + leftInset + PieceView.DEPTH_X,
-          y + faceSize - 1 + PieceView.DEPTH_Y,
-          x + faceSize - rightInset + PieceView.DEPTH_X,
-          y + faceSize - 1 + PieceView.DEPTH_Y,
-          x + faceSize - rightInset,
-          y + faceSize - 1,
-        );
-      }
+    if (!underlayTexture) {
+      throw new Error(`Unable to create underlay texture for piece "${this.piece.id}".`);
     }
 
-    this.underlayContainer.add(bottomWall);
+    const context = underlayTexture.getContext();
+    context.clearRect(0, 0, this.hitWidth, textureHeight);
+    context.fillStyle = '#000000';
+    this.traceBottomUnderlayPath(context, profiles);
+    context.fill();
+
+    underlayTexture.refresh();
+
+    const image = this.scene.add.image(this.originOffsetX, this.originOffsetY, this.underlayTextureKey);
+    image.setOrigin(0);
+    this.underlayContainer.add(image);
   }
 
   private buildFace(profiles: CellProfile[]): void {
@@ -312,30 +310,17 @@ export class PieceView {
 
     const context = faceTexture.getContext();
     context.clearRect(0, 0, this.hitWidth, this.hitHeight);
+    context.save();
+    this.traceSilhouettePath(context, profiles, 0);
+    context.clip();
+    context.drawImage(
+      solvedSurface,
+      -((this.piece.solvedOrigin.col - solvedBounds.minCol) * this.cellSize),
+      -((this.piece.solvedOrigin.row - solvedBounds.minRow) * this.cellSize),
+    );
+    context.restore();
 
-    for (const profile of profiles) {
-      const rect = this.getFaceRect(profile);
-      const sourceRect = this.getSourceCellRect(profile, solvedBounds.minRow, solvedBounds.minCol);
-      const drawX = rect.x - this.originOffsetX;
-      const drawY = rect.y - this.originOffsetY;
-
-      context.save();
-      context.beginPath();
-      this.traceRoundedRectPath(context, drawX, drawY, rect.width, rect.height, rect.radius);
-      context.clip();
-      context.drawImage(
-        solvedSurface,
-        sourceRect.x,
-        sourceRect.y,
-        sourceRect.width,
-        sourceRect.height,
-        drawX,
-        drawY,
-        rect.width,
-        rect.height,
-      );
-      context.restore();
-    }
+    this.carveConcaveFaceCorners(context);
 
     faceTexture.refresh();
 
@@ -345,111 +330,28 @@ export class PieceView {
     this.visuals.bringToTop(this.faceContainer);
   }
 
-  private buildEdgeLines(profiles: CellProfile[]): void {
-    const outline = this.scene.add.graphics();
-    const highlight = this.scene.add.graphics();
-
-    outline.lineStyle(1.8, 0x000000, 0.68);
-    highlight.lineStyle(1.2, 0xfff7e8, 0.4);
-    const radius = PieceView.FACE_RADIUS - 4;
-    const highlightRadius = radius - 4;
-
-    for (const profile of profiles) {
-      const x = this.originOffsetX + profile.col * this.cellSize + PieceView.FACE_INSET;
-      const y = this.originOffsetY + profile.row * this.cellSize + PieceView.FACE_INSET;
-      const faceSize = this.cellSize - PieceView.FACE_INSET * 2;
-      const inset = 3;
-      const leftGap = profile.openLeft ? radius : 6;
-      const rightGap = profile.openRight ? radius : 6;
-      const topGap = profile.openTop ? radius : 6;
-      const bottomGap = profile.openBottom ? radius : 6;
-
-      if (profile.openTop) {
-        outline.lineBetween(x + leftGap, y + inset, x + faceSize - rightGap, y + inset);
-        highlight.lineBetween(
-          x + (profile.openLeft ? highlightRadius : 10),
-          y + inset + 3,
-          x + faceSize - (profile.openRight ? highlightRadius : 10),
-          y + inset + 3,
-        );
-      }
-
-      if (profile.openLeft) {
-        outline.lineBetween(x + inset, y + topGap, x + inset, y + faceSize - bottomGap);
-        highlight.lineBetween(
-          x + inset + 3,
-          y + (profile.openTop ? highlightRadius : 10),
-          x + inset + 3,
-          y + faceSize - (profile.openBottom ? highlightRadius : 10),
-        );
-      }
-
-      if (profile.openBottom) {
-        outline.lineBetween(
-          x + leftGap,
-          y + faceSize - inset,
-          x + faceSize - rightGap,
-          y + faceSize - inset,
-        );
-      }
-
-      if (profile.openRight) {
-        outline.lineBetween(
-          x + faceSize - inset,
-          y + topGap,
-          x + faceSize - inset,
-          y + faceSize - bottomGap,
-        );
-      }
-
-      if (profile.openTop && profile.openLeft) {
-        this.strokeCornerArc(outline, x + radius, y + radius, radius - inset, Math.PI, Math.PI * 1.5);
-        this.strokeCornerArc(highlight, x + highlightRadius, y + highlightRadius, highlightRadius - 2, Math.PI, Math.PI * 1.5);
-      }
-
-      if (profile.openTop && profile.openRight) {
-        this.strokeCornerArc(
-          outline,
-          x + faceSize - radius,
-          y + radius,
-          radius - inset,
-          Math.PI * 1.5,
-          Math.PI * 2,
-        );
-        this.strokeCornerArc(
-          highlight,
-          x + faceSize - highlightRadius,
-          y + highlightRadius,
-          highlightRadius - 2,
-          Math.PI * 1.5,
-          Math.PI * 2,
-        );
-      }
-
-      if (profile.openBottom && profile.openRight) {
-        this.strokeCornerArc(
-          outline,
-          x + faceSize - radius,
-          y + faceSize - radius,
-          radius - inset,
-          0,
-          Math.PI * 0.5,
-        );
-      }
-
-      if (profile.openBottom && profile.openLeft) {
-        this.strokeCornerArc(
-          outline,
-          x + radius,
-          y + faceSize - radius,
-          radius - inset,
-          Math.PI * 0.5,
-          Math.PI,
-        );
-      }
+  private buildShell(profiles: CellProfile[]): void {
+    if (this.scene.textures.exists(this.shellTextureKey)) {
+      this.scene.textures.remove(this.shellTextureKey);
     }
 
-    this.visuals.add([outline, highlight]);
+    const shellTexture = this.scene.textures.createCanvas(this.shellTextureKey, this.hitWidth, this.hitHeight);
+
+    if (!shellTexture) {
+      throw new Error(`Unable to create shell texture for piece "${this.piece.id}".`);
+    }
+
+    const context = shellTexture.getContext();
+    context.clearRect(0, 0, this.hitWidth, this.hitHeight);
+    context.fillStyle = '#000000';
+    this.traceShellPath(context, profiles, 0);
+    context.fill();
+    this.carveShellConcaveCorners(context, 0);
+    shellTexture.refresh();
+
+    const image = this.scene.add.image(this.originOffsetX, this.originOffsetY, this.shellTextureKey);
+    image.setOrigin(0);
+    this.shellContainer.add(image);
   }
 
   private drawCellFills(
@@ -470,20 +372,6 @@ export class PieceView {
         size,
         this.offsetRadius(profile.radius, radiusDelta),
       );
-    }
-  }
-
-  private drawJoinedFills(
-    graphics: Phaser.GameObjects.Graphics,
-    profiles: CellProfile[],
-    offsetX: number,
-    offsetY: number,
-    sizeDelta: number,
-    radiusDelta: number,
-  ): void {
-    for (const profile of profiles) {
-      const rect = this.getJoinedRect(profile, offsetX, offsetY, sizeDelta, sizeDelta, radiusDelta);
-      graphics.fillRoundedRect(rect.x, rect.y, rect.width, rect.height, rect.radius);
     }
   }
 
@@ -511,33 +399,96 @@ export class PieceView {
     const overlapBottom = profile.joinedBottom ? PieceView.FACE_JOIN_OVERLAP : 0;
 
     return {
-      x: this.originOffsetX + profile.col * this.cellSize + leftInset - overlapLeft,
-      y: this.originOffsetY + profile.row * this.cellSize + topInset - overlapTop,
-      width: this.cellSize - leftInset - rightInset + overlapLeft + overlapRight,
-      height: this.cellSize - topInset - bottomInset + overlapTop + overlapBottom,
+      x: Math.round(this.originOffsetX + profile.col * this.cellSize + leftInset - overlapLeft),
+      y: Math.round(this.originOffsetY + profile.row * this.cellSize + topInset - overlapTop),
+      width: Math.round(this.cellSize - leftInset - rightInset + overlapLeft + overlapRight),
+      height: Math.round(this.cellSize - topInset - bottomInset + overlapTop + overlapBottom),
       radius: this.offsetRadius(profile.radius, -PieceView.FACE_INSET),
     };
   }
 
-  private getSourceCellRect(profile: CellProfile, solvedMinRow: number, solvedMinCol: number): {
+  private getShellRect(profile: CellProfile): {
     x: number;
     y: number;
     width: number;
     height: number;
+    radius: Phaser.Types.GameObjects.Graphics.RoundedRectRadius;
   } {
-    const bleedLeft = profile.joinedLeft ? PieceView.IMAGE_JOIN_BLEED : 0;
-    const bleedRight = profile.joinedRight ? PieceView.IMAGE_JOIN_BLEED : 0;
-    const bleedTop = profile.joinedTop ? PieceView.IMAGE_JOIN_BLEED : 0;
-    const bleedBottom = profile.joinedBottom ? PieceView.IMAGE_JOIN_BLEED : 0;
-    const sourceX = (this.piece.solvedOrigin.col - solvedMinCol + profile.col) * this.cellSize;
-    const sourceY = (this.piece.solvedOrigin.row - solvedMinRow + profile.row) * this.cellSize;
-
     return {
-      x: sourceX - bleedLeft,
-      y: sourceY - bleedTop,
-      width: this.cellSize + bleedLeft + bleedRight,
-      height: this.cellSize + bleedTop + bleedBottom,
+      x: this.originOffsetX + profile.col * this.cellSize,
+      y: this.originOffsetY + profile.row * this.cellSize,
+      width: this.cellSize,
+      height: this.cellSize,
+      radius: profile.radius,
     };
+  }
+
+  private getConcaveCorners(): ConcaveCorner[] {
+    const occupied = new Set(this.piece.localCells.map((cell) => `${cell.row},${cell.col}`));
+    const corners: ConcaveCorner[] = [];
+
+    for (let row = 0; row < this.piece.height - 1; row += 1) {
+      for (let col = 0; col < this.piece.width - 1; col += 1) {
+        const tl = occupied.has(`${row},${col}`);
+        const tr = occupied.has(`${row},${col + 1}`);
+        const bl = occupied.has(`${row + 1},${col}`);
+        const br = occupied.has(`${row + 1},${col + 1}`);
+        const count = Number(tl) + Number(tr) + Number(bl) + Number(br);
+
+        if (count !== 3) {
+          continue;
+        }
+
+        let missing: ConcaveCorner['missing'];
+
+        if (!tl) {
+          missing = 'tl';
+        } else if (!tr) {
+          missing = 'tr';
+        } else if (!bl) {
+          missing = 'bl';
+        } else {
+          missing = 'br';
+        }
+
+        corners.push({
+          x: (col + 1) * this.cellSize,
+          y: (row + 1) * this.cellSize,
+          missing,
+        });
+      }
+    }
+
+    return corners;
+  }
+
+  private carveConcaveFaceCorners(context: CanvasRenderingContext2D): void {
+    this.carveConcaveCorners(context, PieceView.CONCAVE_TRIM_SIZE, 0);
+  }
+
+  private carveShellConcaveCorners(context: CanvasRenderingContext2D, offsetY: number): void {
+    this.carveConcaveCorners(context, PieceView.FACE_RADIUS, offsetY);
+  }
+
+  private carveConcaveCorners(context: CanvasRenderingContext2D, size: number, offsetY: number): void {
+    context.save();
+    context.globalCompositeOperation = 'destination-out';
+
+    for (const corner of this.getConcaveCorners()) {
+      const y = corner.y + offsetY;
+
+      if (corner.missing === 'tl') {
+        context.clearRect(corner.x - size, y - size, size, size);
+      } else if (corner.missing === 'tr') {
+        context.clearRect(corner.x, y - size, size, size);
+      } else if (corner.missing === 'br') {
+        context.clearRect(corner.x, y, size, size);
+      } else {
+        context.clearRect(corner.x - size, y, size, size);
+      }
+    }
+
+    context.restore();
   }
 
   private getJoinedRect(
@@ -563,6 +514,67 @@ export class PieceView {
       height: Math.max(0, rect.height + heightDelta),
       radius: this.offsetRadius(rect.radius, radiusDelta),
     };
+  }
+
+  private traceSilhouettePath(
+    context: CanvasRenderingContext2D,
+    profiles: CellProfile[],
+    offsetY: number,
+  ): void {
+    context.beginPath();
+
+    for (const profile of profiles) {
+      const rect = this.getFaceRect(profile);
+      const drawX = rect.x - this.originOffsetX;
+      const drawY = rect.y - this.originOffsetY + offsetY;
+
+      this.traceRoundedRectPath(context, drawX, drawY, rect.width, rect.height, rect.radius);
+    }
+  }
+
+  private traceShellPath(
+    context: CanvasRenderingContext2D,
+    profiles: CellProfile[],
+    offsetY: number,
+  ): void {
+    context.beginPath();
+
+    for (const profile of profiles) {
+      const rect = this.getShellRect(profile);
+      const drawX = rect.x - this.originOffsetX;
+      const drawY = rect.y - this.originOffsetY + offsetY;
+
+      this.traceRoundedRectPath(context, drawX, drawY, rect.width, rect.height, rect.radius);
+    }
+  }
+
+  private traceBottomUnderlayPath(
+    context: CanvasRenderingContext2D,
+    profiles: CellProfile[],
+  ): void {
+    context.beginPath();
+
+    for (const profile of profiles) {
+      if (!profile.openBottom) {
+        continue;
+      }
+
+      const rect = this.getShellRect(profile);
+      const joinLeft = profile.joinedLeft ? PieceView.UNDERLAY_JOIN_OVERLAP : 0;
+      const joinRight = profile.joinedRight ? PieceView.UNDERLAY_JOIN_OVERLAP : 0;
+      const drawX = rect.x - this.originOffsetX - joinLeft;
+      const drawY = rect.y - this.originOffsetY + rect.height - PieceView.FACE_RADIUS;
+      const width = rect.width + joinLeft + joinRight;
+      const height = PieceView.FACE_RADIUS + PieceView.DEPTH_Y;
+      const radius = {
+        tl: 0,
+        tr: 0,
+        bl: profile.openLeft ? PieceView.FACE_RADIUS : 0,
+        br: profile.openRight ? PieceView.FACE_RADIUS : 0,
+      };
+
+      this.traceRoundedRectPath(context, drawX, drawY, width, height, radius);
+    }
   }
 
   private getSolvedSurfaceKey(): string {
@@ -665,39 +677,6 @@ export class PieceView {
     context.lineTo(x, y + tl);
     context.quadraticCurveTo(x, y, x + tl, y);
     context.closePath();
-  }
-
-  private strokeCornerArc(
-    graphics: Phaser.GameObjects.Graphics,
-    x: number,
-    y: number,
-    radius: number,
-    startAngle: number,
-    endAngle: number,
-  ): void {
-    graphics.beginPath();
-    graphics.arc(x, y, radius, startAngle, endAngle);
-    graphics.strokePath();
-  }
-
-  private fillQuad(
-    graphics: Phaser.GameObjects.Graphics,
-    x1: number,
-    y1: number,
-    x2: number,
-    y2: number,
-    x3: number,
-    y3: number,
-    x4: number,
-    y4: number,
-  ): void {
-    graphics.beginPath();
-    graphics.moveTo(x1, y1);
-    graphics.lineTo(x2, y2);
-    graphics.lineTo(x3, y3);
-    graphics.lineTo(x4, y4);
-    graphics.closePath();
-    graphics.fillPath();
   }
 
 }
