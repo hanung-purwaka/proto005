@@ -19,12 +19,18 @@ export interface PieceBounds {
   height: number;
 }
 
+export interface PieceVisualMaskSource {
+  resolution: number;
+  cells: CellTuple[];
+}
+
 export interface PieceSource {
   id: string;
   cells: CellTuple[];
   solvedOrigin: CellTuple;
   startOrigin: CellTuple;
   thickness?: number;
+  visualMask?: PieceVisualMaskSource;
 }
 
 export interface SourceLevelDefinition {

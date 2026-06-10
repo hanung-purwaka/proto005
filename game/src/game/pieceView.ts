@@ -19,6 +19,10 @@ interface OccupancyLookup {
 interface CellProfile {
   row: number;
   col: number;
+  exposedTop: boolean;
+  exposedBottom: boolean;
+  exposedLeft: boolean;
+  exposedRight: boolean;
   radius: Phaser.Types.GameObjects.Graphics.RoundedRectRadius;
   openTop: boolean;
   openBottom: boolean;
@@ -28,6 +32,17 @@ interface CellProfile {
   joinedBottom: boolean;
   joinedLeft: boolean;
   joinedRight: boolean;
+  imageEdgeTop: boolean;
+  imageEdgeBottom: boolean;
+  imageEdgeLeft: boolean;
+  imageEdgeRight: boolean;
+}
+
+interface ImageEdgeProfile {
+  top: boolean;
+  bottom: boolean;
+  left: boolean;
+  right: boolean;
 }
 
 type ConcaveCorner = {
@@ -48,8 +63,6 @@ export class PieceView {
   private static readonly FACE_JOIN_OVERLAP = 3;
   private static readonly IMAGE_JOIN_BLEED = 2;
   private static readonly CONCAVE_TRIM_SIZE = PieceView.FACE_JOIN_OVERLAP + PieceView.IMAGE_JOIN_BLEED + 4;
-  private static readonly UNDERLAY_CONCAVE_TRIM = PieceView.CONCAVE_TRIM_SIZE;
-  private static readonly UNDERLAY_JOIN_OVERLAP = 1;
   private static readonly DRAG_FACE_LIFT_Y = 4;
   private static readonly DRAG_UNDERLAY_LIFT_Y = 2;
 
@@ -61,6 +74,7 @@ export class PieceView {
   private readonly visuals: Phaser.GameObjects.Container;
   private readonly shellContainer: Phaser.GameObjects.Container;
   private readonly faceContainer: Phaser.GameObjects.Container;
+  private readonly imageEdgesByCell: Map<string, ImageEdgeProfile>;
   private readonly underlayTextureKey: string;
   private readonly shellTextureKey: string;
   private readonly faceTextureKey: string;
@@ -81,6 +95,7 @@ export class PieceView {
     this.underlayTextureKey = `piece-underlay:${level.id}:${piece.id}`;
     this.shellTextureKey = `piece-shell:${level.id}:${piece.id}`;
     this.faceTextureKey = `piece-face:${level.id}:${piece.id}`;
+    this.imageEdgesByCell = this.buildImageEdgeLookup();
     this.underlayContainer = scene.add.container(0, 0);
     this.visuals = scene.add.container(0, 0);
     this.shellContainer = scene.add.container(0, 0);
@@ -201,10 +216,15 @@ export class PieceView {
       const bottomOccupant = getOccupant(boardRow + 1, boardCol);
       const leftOccupant = getOccupant(boardRow, boardCol - 1);
       const rightOccupant = getOccupant(boardRow, boardCol + 1);
-      const openTop = !topOccupant;
-      const openBottom = !bottomOccupant;
-      const openLeft = !leftOccupant;
-      const openRight = !rightOccupant;
+      const imageEdges = this.getImageEdgesForCell(cell.row, cell.col);
+      const exposedTop = !topOccupant;
+      const exposedBottom = !bottomOccupant;
+      const exposedLeft = !leftOccupant;
+      const exposedRight = !rightOccupant;
+      const openTop = exposedTop && !imageEdges.top;
+      const openBottom = exposedBottom && !imageEdges.bottom;
+      const openLeft = exposedLeft && !imageEdges.left;
+      const openRight = exposedRight && !imageEdges.right;
       const joinedTop = topOccupant === this.piece.id;
       const joinedBottom = bottomOccupant === this.piece.id;
       const joinedLeft = leftOccupant === this.piece.id;
@@ -214,6 +234,10 @@ export class PieceView {
       profiles.push({
         row: cell.row,
         col: cell.col,
+        exposedTop,
+        exposedBottom,
+        exposedLeft,
+        exposedRight,
         openTop,
         openBottom,
         openLeft,
@@ -222,6 +246,10 @@ export class PieceView {
         joinedBottom,
         joinedLeft,
         joinedRight,
+        imageEdgeTop: imageEdges.top,
+        imageEdgeBottom: imageEdges.bottom,
+        imageEdgeLeft: imageEdges.left,
+        imageEdgeRight: imageEdges.right,
         radius: {
           tl: openTop && openLeft ? radius : 0,
           tr: openTop && openRight ? radius : 0,
@@ -232,6 +260,33 @@ export class PieceView {
     }
 
     return profiles;
+  }
+
+  private buildImageEdgeLookup(): Map<string, ImageEdgeProfile> {
+    const lookup = new Map<string, ImageEdgeProfile>();
+    const solvedBounds = this.level.solvedBounds;
+
+    this.piece.localCells.forEach((cell, index) => {
+      const solvedCell = this.piece.solvedCells[index];
+
+      lookup.set(`${cell.row},${cell.col}`, {
+        top: solvedCell.row === solvedBounds.minRow,
+        bottom: solvedCell.row === solvedBounds.maxRow,
+        left: solvedCell.col === solvedBounds.minCol,
+        right: solvedCell.col === solvedBounds.maxCol,
+      });
+    });
+
+    return lookup;
+  }
+
+  private getImageEdgesForCell(row: number, col: number): ImageEdgeProfile {
+    return this.imageEdgesByCell.get(`${row},${col}`) ?? {
+      top: false,
+      bottom: false,
+      left: false,
+      right: false,
+    };
   }
 
   private buildUnderlay(profiles: CellProfile[]): void {
@@ -467,7 +522,7 @@ export class PieceView {
   }
 
   private carveShellConcaveCorners(context: CanvasRenderingContext2D, offsetY: number): void {
-    this.carveConcaveCorners(context, PieceView.FACE_RADIUS, offsetY);
+    this.carveConcaveCorners(context, PieceView.CONCAVE_TRIM_SIZE - 1, offsetY);
   }
 
   private carveConcaveCorners(context: CanvasRenderingContext2D, size: number, offsetY: number): void {
@@ -476,21 +531,43 @@ export class PieceView {
 
     for (const corner of this.getConcaveCorners()) {
       const y = corner.y + offsetY;
-
-      if (corner.missing === 'tl') {
-        context.clearRect(corner.x - size, y - size, size, size);
-      } else if (corner.missing === 'tr') {
-        context.clearRect(corner.x, y - size, size, size);
-      } else if (corner.missing === 'br') {
-        context.clearRect(corner.x, y, size, size);
-      } else {
-        context.clearRect(corner.x - size, y, size, size);
-      }
+      const [startAngle, endAngle] = this.getConcaveAngles(corner.missing);
+      this.fillConcaveQuarter(context, corner.x, y, size, startAngle, endAngle);
     }
 
     context.restore();
   }
 
+  private fillConcaveQuarter(
+    context: CanvasRenderingContext2D,
+    centerX: number,
+    centerY: number,
+    radius: number,
+    startAngle: number,
+    endAngle: number,
+  ): void {
+    context.beginPath();
+    context.moveTo(centerX, centerY);
+    context.arc(centerX, centerY, radius, startAngle, endAngle);
+    context.closePath();
+    context.fill();
+  }
+
+  private getConcaveAngles(missing: ConcaveCorner['missing']): [number, number] {
+    if (missing === 'tl') {
+      return [Math.PI, (Math.PI * 3) / 2];
+    }
+
+    if (missing === 'tr') {
+      return [(Math.PI * 3) / 2, Math.PI * 2];
+    }
+
+    if (missing === 'br') {
+      return [0, Math.PI / 2];
+    }
+
+    return [Math.PI / 2, Math.PI];
+  }
   private getJoinedRect(
     profile: CellProfile,
     offsetX: number,
@@ -554,23 +631,34 @@ export class PieceView {
   ): void {
     context.beginPath();
 
-    for (const profile of profiles) {
-      if (!profile.openBottom) {
-        continue;
+    const bottomProfiles = profiles
+      .filter((profile) => profile.exposedBottom)
+      .sort((left, right) => left.row - right.row || left.col - right.col);
+
+    for (let index = 0; index < bottomProfiles.length; index += 1) {
+      const start = bottomProfiles[index];
+      let end = start;
+
+      while (
+        index + 1 < bottomProfiles.length
+        && bottomProfiles[index + 1].row === start.row
+        && bottomProfiles[index + 1].col === end.col + 1
+      ) {
+        end = bottomProfiles[index + 1];
+        index += 1;
       }
 
-      const rect = this.getShellRect(profile);
-      const joinLeft = profile.joinedLeft ? PieceView.UNDERLAY_JOIN_OVERLAP : 0;
-      const joinRight = profile.joinedRight ? PieceView.UNDERLAY_JOIN_OVERLAP : 0;
-      const drawX = rect.x - this.originOffsetX - joinLeft;
-      const drawY = rect.y - this.originOffsetY + rect.height - PieceView.FACE_RADIUS;
-      const width = rect.width + joinLeft + joinRight;
+      const leftRect = this.getShellRect(start);
+      const rightRect = this.getShellRect(end);
+      const drawX = leftRect.x - this.originOffsetX;
+      const drawY = leftRect.y - this.originOffsetY + leftRect.height - PieceView.FACE_RADIUS;
+      const width = rightRect.x + rightRect.width - leftRect.x;
       const height = PieceView.FACE_RADIUS + PieceView.DEPTH_Y;
       const radius = {
         tl: 0,
         tr: 0,
-        bl: profile.openLeft ? PieceView.FACE_RADIUS : 0,
-        br: profile.openRight ? PieceView.FACE_RADIUS : 0,
+        bl: start.exposedLeft ? PieceView.FACE_RADIUS : 0,
+        br: end.exposedRight ? PieceView.FACE_RADIUS : 0,
       };
 
       this.traceRoundedRectPath(context, drawX, drawY, width, height, radius);

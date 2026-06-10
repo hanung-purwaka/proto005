@@ -17,7 +17,14 @@ import type { CompiledLevelData } from '@shared/puzzle';
 
 type SceneInitData = { levelId?: string };
 type ResultState = 'win' | 'lose';
-type RevealCell = { boardRow: number; boardCol: number };
+type RevealCell = {
+  boardRow: number;
+  boardCol: number;
+  imageEdgeTop: boolean;
+  imageEdgeBottom: boolean;
+  imageEdgeLeft: boolean;
+  imageEdgeRight: boolean;
+};
 
 export class GameScene extends Phaser.Scene {
   private board!: PuzzleBoard;
@@ -75,6 +82,16 @@ export class GameScene extends Phaser.Scene {
     }
 
     return levelBank.find((level) => level.id === levelId) ?? levelBank[0];
+  }
+
+  private getNextLevel(): CompiledLevelData | null {
+    const currentIndex = levelBank.findIndex((level) => level.id === this.session.level.id);
+
+    if (currentIndex < 0 || currentIndex >= levelBank.length - 1) {
+      return null;
+    }
+
+    return levelBank[currentIndex + 1];
   }
 
   private getBoardMetrics(level: CompiledLevelData): BoardMetrics {
@@ -462,8 +479,10 @@ export class GameScene extends Phaser.Scene {
       },
     ).setOrigin(0.5);
 
-    const button = this.buildWideButton(GAME_WIDTH / 2, GAME_HEIGHT / 2 + 64, isWin ? 'Play Again' : 'Try Again', () => {
-      this.scene.restart({ levelId: this.session.level.id });
+    const nextLevel = isWin ? this.getNextLevel() : null;
+    const buttonLabel = isWin ? (nextLevel ? 'Next Level' : 'Play Again') : 'Try Again';
+    const button = this.buildWideButton(GAME_WIDTH / 2, GAME_HEIGHT / 2 + 64, buttonLabel, () => {
+      this.scene.restart({ levelId: nextLevel?.id ?? this.session.level.id });
     });
 
     container.add([scrim, panel, title, body, button]);
@@ -500,7 +519,7 @@ export class GameScene extends Phaser.Scene {
     solvedImage.setDisplaySize(imageWidth, imageHeight);
 
     for (const cell of revealCells) {
-      const { radius, x: maskX, y: maskY, width: maskWidth, height: maskHeight } = this.getRevealCellMask(cell.boardRow, cell.boardCol);
+      const { radius, x: maskX, y: maskY, width: maskWidth, height: maskHeight } = this.getRevealCellMask(cell);
       maskShape.fillRoundedRect(maskX - bounds.centerX, maskY - bounds.centerY, maskWidth, maskHeight, radius);
     }
 
@@ -585,6 +604,10 @@ export class GameScene extends Phaser.Scene {
         cells.push({
           boardRow: solvedCell.row + translation.row,
           boardCol: solvedCell.col + translation.col,
+          imageEdgeTop: solvedCell.row === this.session.level.solvedBounds.minRow,
+          imageEdgeBottom: solvedCell.row === this.session.level.solvedBounds.maxRow,
+          imageEdgeLeft: solvedCell.col === this.session.level.solvedBounds.minCol,
+          imageEdgeRight: solvedCell.col === this.session.level.solvedBounds.maxCol,
         });
       }
     }
@@ -592,7 +615,7 @@ export class GameScene extends Phaser.Scene {
     return cells;
   }
 
-  private getRevealCellMask(row: number, col: number): {
+  private getRevealCellMask(cell: RevealCell): {
     x: number;
     y: number;
     width: number;
@@ -600,18 +623,18 @@ export class GameScene extends Phaser.Scene {
     radius: Phaser.Types.GameObjects.Graphics.RoundedRectRadius;
   } {
     const radius = PIECE_FACE_RADIUS - PIECE_FACE_INSET - 1;
-    const openTop = !this.board.getOccupant(row - 1, col);
-    const openBottom = !this.board.getOccupant(row + 1, col);
-    const openLeft = !this.board.getOccupant(row, col - 1);
-    const openRight = !this.board.getOccupant(row, col + 1);
+    const openTop = !this.board.getOccupant(cell.boardRow - 1, cell.boardCol) && !cell.imageEdgeTop;
+    const openBottom = !this.board.getOccupant(cell.boardRow + 1, cell.boardCol) && !cell.imageEdgeBottom;
+    const openLeft = !this.board.getOccupant(cell.boardRow, cell.boardCol - 1) && !cell.imageEdgeLeft;
+    const openRight = !this.board.getOccupant(cell.boardRow, cell.boardCol + 1) && !cell.imageEdgeRight;
     const leftInset = openLeft ? PIECE_FACE_INSET : 0;
     const rightInset = openRight ? PIECE_FACE_INSET : 0;
     const topInset = openTop ? PIECE_FACE_INSET : 0;
     const bottomInset = openBottom ? PIECE_FACE_INSET : 0;
 
     return {
-      x: this.boardMetrics.originX + col * this.boardMetrics.cellSize + leftInset,
-      y: this.boardMetrics.originY + row * this.boardMetrics.cellSize + topInset,
+      x: this.boardMetrics.originX + cell.boardCol * this.boardMetrics.cellSize + leftInset,
+      y: this.boardMetrics.originY + cell.boardRow * this.boardMetrics.cellSize + topInset,
       width: this.boardMetrics.cellSize - leftInset - rightInset,
       height: this.boardMetrics.cellSize - topInset - bottomInset,
       radius: {

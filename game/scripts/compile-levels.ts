@@ -11,6 +11,7 @@ import {
 } from '@shared/grid';
 import type {
   CellTuple,
+  SourceLevelDefinition,
   CompiledLevelData,
   CompiledPieceData,
   GridCoord,
@@ -23,6 +24,15 @@ const imagesDir = path.join(rootDir, 'assets/images/levels');
 const outputFile = path.join(rootDir, 'game/src/generated/levelBank.ts');
 let availableImageFiles: string[] | undefined;
 
+const AUTO_VARIANTS = [
+  { key: 'mirror-h', transform: 'mirror-h' },
+  { key: 'mirror-v', transform: 'mirror-v' },
+  { key: 'rotate-180', transform: 'rotate-180' },
+] as const;
+
+type AutoTransform = (typeof AUTO_VARIANTS)[number]['transform'];
+type LevelTransform = AutoTransform | 'identity';
+
 async function main(): Promise<void> {
   availableImageFiles = (await fs.readdir(imagesDir))
     .filter((filename) => !filename.startsWith('.'))
@@ -30,20 +40,42 @@ async function main(): Promise<void> {
 
   const filenames = (await fs.readdir(levelsDir))
     .filter((filename) => filename.endsWith('.json'))
-    .sort((left, right) => left.localeCompare(right));
+    .sort((left, right) => {
+      if (left === 'sample-bloom.json') {
+        return -1;
+      }
+
+      if (right === 'sample-bloom.json') {
+        return 1;
+      }
+
+      return left.localeCompare(right);
+    });
 
   if (filenames.length === 0) {
     throw new Error(`No level JSON files were found in ${levelsDir}.`);
   }
 
-  const levels: CompiledLevelData[] = [];
+  const sourceLevels: SourceLevelDefinition[] = [];
   const imageImports = new Map<string, string>();
 
   for (const filename of filenames) {
     const filePath = path.join(levelsDir, filename);
     const rawText = await fs.readFile(filePath, 'utf8');
     const parsed = JSON.parse(rawText) as unknown;
-    const level = compileLevel(parsed, filename);
+    const sourceLevel = readSourceLevelDefinition(parsed, filename);
+    sourceLevels.push(sourceLevel);
+  }
+
+  if (sourceLevels.length === 0) {
+    throw new Error(`No source levels were loaded from ${levelsDir}.`);
+  }
+
+  const expandedSourceLevels = expandGeneratedLevels(sourceLevels, getAvailableImageFiles());
+  const levels: CompiledLevelData[] = [];
+
+  for (const sourceLevel of expandedSourceLevels) {
+    const level = compileLevel(sourceLevel, `${sourceLevel.id}.generated`);
 
     const importName = toImportName(level.image);
     imageImports.set(level.image, importName);
@@ -58,7 +90,7 @@ async function main(): Promise<void> {
   console.log(`Compiled ${levels.length} level(s) to ${outputFile}`);
 }
 
-function compileLevel(input: unknown, filename: string): CompiledLevelData {
+function readSourceLevelDefinition(input: unknown, filename: string): SourceLevelDefinition {
   if (!isRecord(input)) {
     throw new Error(`${filename}: top-level JSON must be an object.`);
   }
@@ -71,6 +103,20 @@ function compileLevel(input: unknown, filename: string): CompiledLevelData {
   if (pieceInputs.length === 0) {
     throw new Error(`${filename}: at least one piece is required.`);
   }
+
+  return {
+    id,
+    image,
+    grid,
+    pieces: pieceInputs.map((pieceInput) => readSourcePiece(pieceInput, filename)),
+  };
+}
+
+function compileLevel(input: SourceLevelDefinition, filename: string): CompiledLevelData {
+  const id = input.id;
+  const image = resolveImageFile(input.image, filename);
+  const grid = input.grid;
+  const pieceInputs = input.pieces;
 
   const pieces: CompiledPieceData[] = [];
   const solvedOccupancy = new Map<string, string>();
@@ -125,6 +171,28 @@ function compileLevel(input: unknown, filename: string): CompiledLevelData {
     pieces,
     solvedBounds,
     solvedCellCount,
+  };
+}
+
+function readSourcePiece(input: unknown, filename: string): SourceLevelDefinition['pieces'][number] {
+  if (!isRecord(input)) {
+    throw new Error(`${filename}: each piece must be an object.`);
+  }
+
+  const id = readString(input.id, `${filename}: piece "id"`);
+  const cells = readCellTupleArray(input.cells, `${filename}: piece "${id}" cells`);
+  const solvedOrigin = readCellTuple(input.solvedOrigin, `${filename}: piece "${id}" solvedOrigin`);
+  const startOrigin = readCellTuple(input.startOrigin, `${filename}: piece "${id}" startOrigin`);
+  const thickness = input.thickness === undefined
+    ? undefined
+    : readWholeNumber(input.thickness, `${filename}: piece "${id}" thickness`);
+
+  return {
+    id,
+    cells,
+    solvedOrigin,
+    startOrigin,
+    thickness,
   };
 }
 
@@ -212,6 +280,122 @@ function validateWithinGrid(cells: GridCoord[], rowLimit: number, colLimit: numb
       throw new Error(`${label} falls outside the ${rowLimit}x${colLimit} board at ${cellKey(cell.row, cell.col)}.`);
     }
   }
+}
+
+function expandGeneratedLevels(
+  baseLevels: SourceLevelDefinition[],
+  imageFiles: string[],
+): SourceLevelDefinition[] {
+  const expanded = [...baseLevels];
+  const existingIds = new Set(baseLevels.map((level) => level.id));
+  const baseImages = new Set(baseLevels.map((level) => level.image));
+  const baseLevelByImage = new Map(baseLevels.map((level) => [level.image, level]));
+  const defaultTemplateLevel = baseLevels[0];
+
+  for (const imageFile of imageFiles) {
+    const imageBase = path.parse(imageFile).name;
+    const templateLevel = baseLevelByImage.get(imageFile) ?? defaultTemplateLevel;
+
+    if (baseImages.has(imageFile) || existingIds.has(imageBase)) {
+      continue;
+    }
+
+    expanded.push(transformLevelTemplate(templateLevel, imageBase, imageFile, 'identity'));
+    existingIds.add(imageBase);
+  }
+
+  for (const imageFile of imageFiles) {
+    const imageBase = path.parse(imageFile).name;
+    const templateLevel = baseLevelByImage.get(imageFile) ?? defaultTemplateLevel;
+
+    for (const variant of AUTO_VARIANTS) {
+      const levelId = `${imageBase}-${variant.key}`;
+
+      if (existingIds.has(levelId)) {
+        continue;
+      }
+
+      expanded.push(transformLevelTemplate(templateLevel, levelId, imageFile, variant.transform));
+      existingIds.add(levelId);
+    }
+  }
+
+  return expanded;
+}
+
+function transformLevelTemplate(
+  template: SourceLevelDefinition,
+  levelId: string,
+  image: string,
+  transform: LevelTransform,
+): SourceLevelDefinition {
+  return {
+    id: levelId,
+    image,
+    grid: template.grid,
+    pieces: template.pieces.map((piece) => transformPiece(template.grid.rows, template.grid.cols, piece, transform)),
+  };
+}
+
+function transformPiece(
+  rowCount: number,
+  colCount: number,
+  piece: SourceLevelDefinition['pieces'][number],
+  transform: LevelTransform,
+): SourceLevelDefinition['pieces'][number] {
+  const solvedAbsolute = piece.cells.map(([row, col]) => [
+    row + piece.solvedOrigin[0],
+    col + piece.solvedOrigin[1],
+  ] as CellTuple);
+  const startAbsolute = piece.cells.map(([row, col]) => [
+    row + piece.startOrigin[0],
+    col + piece.startOrigin[1],
+  ] as CellTuple);
+  const solvedTransformed = solvedAbsolute.map((cell) => transformCell(cell, rowCount, colCount, transform));
+  const startTransformed = startAbsolute.map((cell) => transformCell(cell, rowCount, colCount, transform));
+  const solvedBounds = getTupleBounds(solvedTransformed);
+  const startBounds = getTupleBounds(startTransformed);
+
+  return {
+    id: piece.id,
+    cells: solvedTransformed.map(([row, col]) => [row - solvedBounds.minRow, col - solvedBounds.minCol]),
+    solvedOrigin: [solvedBounds.minRow, solvedBounds.minCol],
+    startOrigin: [startBounds.minRow, startBounds.minCol],
+    thickness: piece.thickness,
+  };
+}
+
+function transformCell(
+  [row, col]: CellTuple,
+  rowCount: number,
+  colCount: number,
+  transform: LevelTransform,
+): CellTuple {
+  if (transform === 'identity') {
+    return [row, col];
+  }
+
+  if (transform === 'mirror-h') {
+    return [row, colCount - 1 - col];
+  }
+
+  if (transform === 'mirror-v') {
+    return [rowCount - 1 - row, col];
+  }
+
+  return [rowCount - 1 - row, colCount - 1 - col];
+}
+
+function getTupleBounds(cells: CellTuple[]): { minRow: number; minCol: number } {
+  let minRow = Number.POSITIVE_INFINITY;
+  let minCol = Number.POSITIVE_INFINITY;
+
+  for (const [row, col] of cells) {
+    minRow = Math.min(minRow, row);
+    minCol = Math.min(minCol, col);
+  }
+
+  return { minRow, minCol };
 }
 
 function renderModule(levels: CompiledLevelData[], imageImports: Map<string, string>): string {
