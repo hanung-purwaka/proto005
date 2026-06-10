@@ -21,4 +21,8 @@ const config: Phaser.Types.Core.GameConfig = {
   },
 };
 
-new Phaser.Game(config);
+const game = new Phaser.Game(config);
+
+if (import.meta.env.DEV) {
+  (globalThis as { __pictureBlocksGame?: Phaser.Game }).__pictureBlocksGame = game;
+}

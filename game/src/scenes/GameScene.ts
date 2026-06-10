@@ -208,7 +208,7 @@ export class GameScene extends Phaser.Scene {
 
   private registerInput(): void {
     this.input.on('gameobjectdown', (pointer: Phaser.Input.Pointer, gameObject: Phaser.GameObjects.GameObject) => {
-      const entry = Array.from(this.pieceViews.entries()).find(([, view]) => view.container === gameObject);
+      const entry = Array.from(this.pieceViews.entries()).find(([, view]) => view.matchesInputTarget(gameObject));
 
       if (!entry || this.finishedResult || this.dragState) {
         return;

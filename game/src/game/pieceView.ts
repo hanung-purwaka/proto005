@@ -5,13 +5,6 @@ import type { DragAxis } from './runtimeTypes';
 export const PIECE_FACE_RADIUS = 16;
 export const PIECE_FACE_INSET = 1;
 
-interface CellHitArea {
-  cells: Array<{ row: number; col: number }>;
-  cellSize: number;
-  inset: number;
-  radius: number;
-}
-
 interface OccupancyLookup {
   (row: number, col: number): string | null;
 }
@@ -54,8 +47,7 @@ type ConcaveCorner = {
 export class PieceView {
   readonly container: Phaser.GameObjects.Container;
 
-  private static readonly FACE_HIT_INSET = 7;
-  private static readonly FACE_HIT_RADIUS = 12;
+  private static readonly FACE_HIT_ALPHA_THRESHOLD = 72;
   private static readonly FACE_RADIUS = PIECE_FACE_RADIUS;
   private static readonly DEPTH_X = 0;
   private static readonly DEPTH_Y = 5;
@@ -78,6 +70,7 @@ export class PieceView {
   private readonly underlayTextureKey: string;
   private readonly shellTextureKey: string;
   private readonly faceTextureKey: string;
+  private faceImage?: Phaser.GameObjects.Image;
   private isDragging = false;
 
   constructor(
@@ -106,17 +99,6 @@ export class PieceView {
     this.container.add(this.visuals);
     this.underlayContainer.setDepth(4);
     this.container.setDepth(12);
-
-    this.container.setSize(this.hitWidth, this.hitHeight);
-    this.container.setInteractive(
-      {
-        cells: this.piece.localCells,
-        cellSize: this.cellSize,
-        inset: PieceView.FACE_HIT_INSET,
-        radius: PieceView.FACE_HIT_RADIUS,
-      } satisfies CellHitArea,
-      (hitArea, x, y) => this.isPointInsideFace(hitArea as CellHitArea, x, y),
-    );
   }
 
   setGridPosition(x: number, y: number): void {
@@ -147,6 +129,10 @@ export class PieceView {
 
   getRevealTargets(): Phaser.GameObjects.Container[] {
     return [this.container, this.underlayContainer];
+  }
+
+  matchesInputTarget(gameObject: Phaser.GameObjects.GameObject): boolean {
+    return gameObject === this.faceImage;
   }
 
   tweenTo(x: number, y: number, duration: number, onComplete?: () => void): void {
@@ -381,7 +367,12 @@ export class PieceView {
 
     const image = this.scene.add.image(this.originOffsetX, this.originOffsetY, this.faceTextureKey);
     image.setOrigin(0);
+    image.setInteractive({
+      pixelPerfect: true,
+      alphaTolerance: PieceView.FACE_HIT_ALPHA_THRESHOLD,
+    });
     this.faceContainer.add(image);
+    this.faceImage = image;
     this.visuals.bringToTop(this.faceContainer);
   }
 
@@ -667,49 +658,6 @@ export class PieceView {
 
   private getSolvedSurfaceKey(): string {
     return `solved-surface:${this.level.id}:${this.cellSize}`;
-  }
-
-  private isPointInsideFace(hitArea: CellHitArea, x: number, y: number): boolean {
-    for (const cell of hitArea.cells) {
-      const left = this.originOffsetX + cell.col * hitArea.cellSize + hitArea.inset;
-      const top = this.originOffsetY + cell.row * hitArea.cellSize + hitArea.inset;
-      const size = hitArea.cellSize - hitArea.inset * 2;
-
-      if (this.isPointInsideRoundedRect(x, y, left, top, size, size, hitArea.radius)) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  private isPointInsideRoundedRect(
-    pointX: number,
-    pointY: number,
-    left: number,
-    top: number,
-    width: number,
-    height: number,
-    radius: number,
-  ): boolean {
-    if (pointX < left || pointX > left + width || pointY < top || pointY > top + height) {
-      return false;
-    }
-
-    const clampedRadius = Math.min(radius, width / 2, height / 2);
-    const innerLeft = left + clampedRadius;
-    const innerRight = left + width - clampedRadius;
-    const innerTop = top + clampedRadius;
-    const innerBottom = top + height - clampedRadius;
-
-    if ((pointX >= innerLeft && pointX <= innerRight) || (pointY >= innerTop && pointY <= innerBottom)) {
-      return true;
-    }
-
-    const cornerX = pointX < innerLeft ? innerLeft : innerRight;
-    const cornerY = pointY < innerTop ? innerTop : innerBottom;
-
-    return Phaser.Math.Distance.Between(pointX, pointY, cornerX, cornerY) <= clampedRadius;
   }
 
   private offsetRadius(
