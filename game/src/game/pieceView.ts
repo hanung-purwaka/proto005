@@ -3,7 +3,7 @@ import type { CompiledLevelData, CompiledPieceData } from '@shared/puzzle';
 import type { DragAxis } from './runtimeTypes';
 
 export const PIECE_FACE_RADIUS = 16;
-export const PIECE_FACE_INSET = 3;
+export const PIECE_FACE_INSET = 0.5;
 
 interface CellHitArea {
   cells: Array<{ row: number; col: number }>;
@@ -36,15 +36,17 @@ export class PieceView {
   private static readonly FACE_HIT_INSET = 7;
   private static readonly FACE_HIT_RADIUS = 12;
   private static readonly FACE_RADIUS = PIECE_FACE_RADIUS;
-  private static readonly DEPTH_X = 2;
+  private static readonly DEPTH_X = 0;
   private static readonly DEPTH_Y = 5;
   private static readonly FACE_INSET = PIECE_FACE_INSET;
-  private static readonly FACE_JOIN_OVERLAP = 1;
+  private static readonly FACE_JOIN_OVERLAP = 3;
+  private static readonly IMAGE_JOIN_BLEED = 2;
 
   private readonly hitWidth: number;
   private readonly hitHeight: number;
   private readonly originOffsetX: number;
   private readonly originOffsetY: number;
+  private readonly underlayContainer: Phaser.GameObjects.Container;
   private readonly visuals: Phaser.GameObjects.Container;
   private readonly faceContainer: Phaser.GameObjects.Container;
   private readonly faceTextureKey: string;
@@ -62,11 +64,14 @@ export class PieceView {
     this.originOffsetX = -this.hitWidth / 2;
     this.originOffsetY = -this.hitHeight / 2;
     this.faceTextureKey = `piece-face:${level.id}:${piece.id}`;
+    this.underlayContainer = scene.add.container(0, 0);
     this.visuals = scene.add.container(0, 0);
     this.faceContainer = scene.add.container(0, 0);
 
     this.visuals.add(this.faceContainer);
     this.container.add(this.visuals);
+    this.underlayContainer.setDepth(4);
+    this.container.setDepth(12);
 
     this.container.setSize(this.hitWidth, this.hitHeight);
     this.container.setInteractive(
@@ -81,7 +86,10 @@ export class PieceView {
   }
 
   setGridPosition(x: number, y: number): void {
-    this.container.setPosition(x + this.hitWidth / 2, y + this.hitHeight / 2);
+    const centerX = x + this.hitWidth / 2;
+    const centerY = y + this.hitHeight / 2;
+    this.underlayContainer.setPosition(centerX, centerY);
+    this.container.setPosition(centerX, centerY);
   }
 
   setPreviewPosition(baseX: number, baseY: number, axis: DragAxis | undefined, deltaCells: number): void {
@@ -91,10 +99,15 @@ export class PieceView {
   }
 
   setDragging(isDragging: boolean): void {
+    this.underlayContainer.setDepth(isDragging ? 8 : 4);
     this.container.setDepth(isDragging ? 40 : 12);
     this.visuals.setScale(isDragging ? 1.016 : 1);
     this.visuals.setY(isDragging ? -4 : 0);
     this.visuals.setAlpha(1);
+  }
+
+  getRevealTargets(): Phaser.GameObjects.Container[] {
+    return [this.container, this.underlayContainer];
   }
 
   tweenTo(x: number, y: number, duration: number, onComplete?: () => void): void {
@@ -102,7 +115,7 @@ export class PieceView {
     const targetY = y + this.hitHeight / 2;
 
     this.scene.tweens.add({
-      targets: this.container,
+      targets: [this.container, this.underlayContainer],
       x: targetX,
       y: targetY,
       duration,
@@ -115,6 +128,8 @@ export class PieceView {
   }
 
   refreshSurface(pieceRow: number, pieceCol: number, getOccupant: OccupancyLookup): void {
+    this.underlayContainer.removeAll(true);
+
     for (const child of [...this.visuals.list]) {
       if (child !== this.faceContainer) {
         child.destroy();
@@ -129,6 +144,7 @@ export class PieceView {
     this.buildSideWalls(profiles);
     this.buildFace(profiles);
     this.buildEdgeLines(profiles);
+    this.visuals.bringToTop(this.faceContainer);
   }
 
   destroy(): void {
@@ -136,6 +152,7 @@ export class PieceView {
       this.scene.textures.remove(this.faceTextureKey);
     }
 
+    this.underlayContainer.destroy(true);
     this.container.destroy(true);
   }
 
@@ -184,44 +201,38 @@ export class PieceView {
 
   private buildShadow(profiles: CellProfile[]): void {
     const shadow = this.scene.add.graphics();
-    shadow.fillStyle(0x000000, 0.28);
+    shadow.fillStyle(0x000000, 1);
 
     for (const profile of profiles) {
-      const x = this.originOffsetX + profile.col * this.cellSize + PieceView.FACE_INSET + 2;
-      const y = this.originOffsetY + profile.row * this.cellSize + PieceView.DEPTH_Y + 4;
-      const width = this.cellSize - PieceView.FACE_INSET * 2 - 4;
-      const height = 8;
+      const rect = this.getJoinedRect(profile, 0, PieceView.DEPTH_Y + 2, 0, 7, 0);
 
       shadow.fillRoundedRect(
-        x,
-        y,
-        width,
-        height,
-        6,
+        rect.x,
+        rect.y,
+        rect.width,
+        rect.height,
+        rect.radius,
       );
     }
 
-    this.visuals.add(shadow);
+    this.underlayContainer.add(shadow);
   }
 
   private buildDepth(profiles: CellProfile[]): void {
     const body = this.scene.add.graphics();
-    body.fillStyle(0x000000, 0.28);
-    this.drawCellFills(body, profiles, 0, PieceView.DEPTH_Y - 1, 0, -2, -3);
+    body.fillStyle(0x000000, 1);
+    this.drawJoinedFills(body, profiles, 0, PieceView.DEPTH_Y - 1, -1, 0);
 
     const bodyShade = this.scene.add.graphics();
-    bodyShade.fillStyle(0x000000, 0.4);
-    this.drawCellFills(bodyShade, profiles, 0, PieceView.DEPTH_Y + 1, 1, -4, -6);
+    bodyShade.fillStyle(0x000000, 1);
+    this.drawJoinedFills(bodyShade, profiles, 0, PieceView.DEPTH_Y + 1, -2, -1);
 
-    this.visuals.add([body, bodyShade]);
+    this.underlayContainer.add([body, bodyShade]);
   }
 
   private buildSideWalls(profiles: CellProfile[]): void {
     const bottomWall = this.scene.add.graphics();
-    const bottomHighlight = this.scene.add.graphics();
-
-    bottomWall.fillStyle(0x000000, 0.5);
-    bottomHighlight.lineStyle(2, 0x000000, 0.16);
+    bottomWall.fillStyle(0x000000, 1);
 
     for (const profile of profiles) {
       const x = this.originOffsetX + profile.col * this.cellSize + PieceView.FACE_INSET;
@@ -244,32 +255,13 @@ export class PieceView {
           x + faceSize - rightInset,
           y + faceSize - 1,
         );
-        bottomHighlight.lineBetween(
-          x + leftInset + 4,
-          y + faceSize + PieceView.DEPTH_Y - 3,
-          x + faceSize - rightInset - 4,
-          y + faceSize + PieceView.DEPTH_Y - 3,
-        );
       }
     }
 
-    this.visuals.add([bottomWall, bottomHighlight]);
+    this.underlayContainer.add(bottomWall);
   }
 
   private buildFace(profiles: CellProfile[]): void {
-    const faceBase = this.scene.add.graphics();
-    faceBase.fillStyle(0xf7edd7, 1);
-    this.drawFaceCellFills(faceBase, profiles);
-    this.faceContainer.add(faceBase);
-
-    const glossLayer = this.scene.add.container(0, 0);
-    const maskShape = this.scene.add.graphics();
-    maskShape.fillStyle(0xffffff, 1);
-    this.drawFaceCellFills(maskShape, profiles);
-    maskShape.setVisible(false);
-    this.faceContainer.add(maskShape);
-    const faceMask = maskShape.createGeometryMask();
-
     const texture = this.scene.textures.get(this.textureKey);
     const source = texture.getSourceImage() as { width: number; height: number };
     const solvedBounds = this.level.solvedBounds;
@@ -321,69 +313,35 @@ export class PieceView {
     const context = faceTexture.getContext();
     context.clearRect(0, 0, this.hitWidth, this.hitHeight);
 
-    const cropX = (this.piece.solvedOrigin.col - solvedBounds.minCol) * this.cellSize;
-    const cropY = (this.piece.solvedOrigin.row - solvedBounds.minRow) * this.cellSize;
-    const cropWidth = this.piece.width * this.cellSize;
-    const cropHeight = this.piece.height * this.cellSize;
-
-    context.save();
-    context.beginPath();
-
     for (const profile of profiles) {
       const rect = this.getFaceRect(profile);
+      const sourceRect = this.getSourceCellRect(profile, solvedBounds.minRow, solvedBounds.minCol);
       const drawX = rect.x - this.originOffsetX;
       const drawY = rect.y - this.originOffsetY;
-      this.traceRoundedRectPath(context, drawX, drawY, rect.width, rect.height, rect.radius);
-    }
 
-    context.clip();
-    context.drawImage(
-      solvedSurface,
-      cropX,
-      cropY,
-      cropWidth,
-      cropHeight,
-      0,
-      0,
-      this.hitWidth,
-      this.hitHeight,
-    );
-    context.restore();
+      context.save();
+      context.beginPath();
+      this.traceRoundedRectPath(context, drawX, drawY, rect.width, rect.height, rect.radius);
+      context.clip();
+      context.drawImage(
+        solvedSurface,
+        sourceRect.x,
+        sourceRect.y,
+        sourceRect.width,
+        sourceRect.height,
+        drawX,
+        drawY,
+        rect.width,
+        rect.height,
+      );
+      context.restore();
+    }
 
     faceTexture.refresh();
 
     const image = this.scene.add.image(this.originOffsetX, this.originOffsetY, this.faceTextureKey);
     image.setOrigin(0);
     this.faceContainer.add(image);
-
-    const faceRects = profiles.map((profile) => this.getFaceRect(profile));
-    const pieceFaceLeft = faceRects.reduce((min, rect) => Math.min(min, rect.x), Infinity);
-    const pieceFaceTop = faceRects.reduce((min, rect) => Math.min(min, rect.y), Infinity);
-    const pieceFaceRight = faceRects.reduce((max, rect) => Math.max(max, rect.x + rect.width), -Infinity);
-    const pieceFaceBottom = faceRects.reduce((max, rect) => Math.max(max, rect.y + rect.height), -Infinity);
-    const pieceFaceWidth = pieceFaceRight - pieceFaceLeft;
-    const pieceFaceHeight = pieceFaceBottom - pieceFaceTop;
-
-    const gloss = this.scene.add.graphics();
-    gloss.fillStyle(0xfff7e8, 0.16);
-    gloss.fillRoundedRect(pieceFaceLeft + 10, pieceFaceTop + 8, Math.max(0, pieceFaceWidth - 20), 10, 5);
-    gloss.fillStyle(0xffffff, 0.08);
-    gloss.fillCircle(pieceFaceLeft + pieceFaceWidth * 0.28, pieceFaceTop + pieceFaceHeight * 0.22, 7);
-    glossLayer.add(gloss);
-
-    const faceShade = this.scene.add.graphics();
-    faceShade.fillStyle(0x6d4c3a, 0.05);
-    faceShade.fillRoundedRect(
-      pieceFaceLeft + 10,
-      pieceFaceTop + pieceFaceHeight - 16,
-      Math.max(0, pieceFaceWidth - 20),
-      6,
-      3,
-    );
-    glossLayer.add(faceShade);
-
-    glossLayer.setMask(faceMask);
-    this.faceContainer.add(glossLayer);
     this.visuals.bringToTop(this.faceContainer);
   }
 
@@ -515,6 +473,20 @@ export class PieceView {
     }
   }
 
+  private drawJoinedFills(
+    graphics: Phaser.GameObjects.Graphics,
+    profiles: CellProfile[],
+    offsetX: number,
+    offsetY: number,
+    sizeDelta: number,
+    radiusDelta: number,
+  ): void {
+    for (const profile of profiles) {
+      const rect = this.getJoinedRect(profile, offsetX, offsetY, sizeDelta, sizeDelta, radiusDelta);
+      graphics.fillRoundedRect(rect.x, rect.y, rect.width, rect.height, rect.radius);
+    }
+  }
+
   private drawFaceCellFills(graphics: Phaser.GameObjects.Graphics, profiles: CellProfile[]): void {
     for (const profile of profiles) {
       const rect = this.getFaceRect(profile);
@@ -544,6 +516,52 @@ export class PieceView {
       width: this.cellSize - leftInset - rightInset + overlapLeft + overlapRight,
       height: this.cellSize - topInset - bottomInset + overlapTop + overlapBottom,
       radius: this.offsetRadius(profile.radius, -PieceView.FACE_INSET),
+    };
+  }
+
+  private getSourceCellRect(profile: CellProfile, solvedMinRow: number, solvedMinCol: number): {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  } {
+    const bleedLeft = profile.joinedLeft ? PieceView.IMAGE_JOIN_BLEED : 0;
+    const bleedRight = profile.joinedRight ? PieceView.IMAGE_JOIN_BLEED : 0;
+    const bleedTop = profile.joinedTop ? PieceView.IMAGE_JOIN_BLEED : 0;
+    const bleedBottom = profile.joinedBottom ? PieceView.IMAGE_JOIN_BLEED : 0;
+    const sourceX = (this.piece.solvedOrigin.col - solvedMinCol + profile.col) * this.cellSize;
+    const sourceY = (this.piece.solvedOrigin.row - solvedMinRow + profile.row) * this.cellSize;
+
+    return {
+      x: sourceX - bleedLeft,
+      y: sourceY - bleedTop,
+      width: this.cellSize + bleedLeft + bleedRight,
+      height: this.cellSize + bleedTop + bleedBottom,
+    };
+  }
+
+  private getJoinedRect(
+    profile: CellProfile,
+    offsetX: number,
+    offsetY: number,
+    widthDelta: number,
+    heightDelta: number,
+    radiusDelta: number,
+  ): {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    radius: Phaser.Types.GameObjects.Graphics.RoundedRectRadius;
+  } {
+    const rect = this.getFaceRect(profile);
+
+    return {
+      x: rect.x + offsetX,
+      y: rect.y + offsetY,
+      width: Math.max(0, rect.width + widthDelta),
+      height: Math.max(0, rect.height + heightDelta),
+      radius: this.offsetRadius(rect.radius, radiusDelta),
     };
   }
 

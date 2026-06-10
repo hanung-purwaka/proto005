@@ -528,7 +528,7 @@ export class GameScene extends Phaser.Scene {
     this.solvedReveal = reveal;
 
     this.tweens.add({
-      targets: Array.from(this.pieceViews.values()).map((view) => view.container),
+      targets: Array.from(this.pieceViews.values()).flatMap((view) => view.getRevealTargets()),
       alpha: 0,
       duration: 150,
       ease: 'Sine.Out',
