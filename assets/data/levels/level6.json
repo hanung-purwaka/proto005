@@ -1,0 +1,142 @@
+{
+  "id": "level6",
+  "image": "level6",
+  "grid": {
+    "rows": 7,
+    "cols": 7
+  },
+  "pieces": [
+    {
+      "id": "square",
+      "cells": [
+        [0, 0],
+        [0, 1],
+        [1, 0],
+        [1, 1]
+      ],
+      "solvedOrigin": [0, 0],
+      "startOrigin": [0, 1],
+      "thickness": 18
+    },
+    {
+      "id": "l4-a",
+      "cells": [
+        [0, 1],
+        [1, 1],
+        [2, 0],
+        [2, 1]
+      ],
+      "solvedOrigin": [0, 1],
+      "startOrigin": [0, 2],
+      "thickness": 18
+    },
+    {
+      "id": "i3",
+      "cells": [
+        [0, 0],
+        [1, 0],
+        [2, 0]
+      ],
+      "solvedOrigin": [0, 3],
+      "startOrigin": [3, 3],
+      "thickness": 15
+    },
+    {
+      "id": "l4-b",
+      "cells": [
+        [0, 0],
+        [0, 1],
+        [1, 0],
+        [2, 0]
+      ],
+      "solvedOrigin": [0, 4],
+      "startOrigin": [0, 4],
+      "thickness": 18
+    },
+    {
+      "id": "mono-a",
+      "cells": [
+        [0, 0]
+      ],
+      "solvedOrigin": [1, 5],
+      "startOrigin": [4, 4],
+      "thickness": 12
+    },
+    {
+      "id": "domino",
+      "cells": [
+        [0, 0],
+        [1, 0]
+      ],
+      "solvedOrigin": [2, 0],
+      "startOrigin": [5, 0],
+      "thickness": 14
+    },
+    {
+      "id": "l3-a",
+      "cells": [
+        [0, 1],
+        [1, 0],
+        [1, 1]
+      ],
+      "solvedOrigin": [2, 4],
+      "startOrigin": [0, 5],
+      "thickness": 20
+    },
+    {
+      "id": "z4",
+      "cells": [
+        [0, 0],
+        [1, 0],
+        [1, 1],
+        [2, 1]
+      ],
+      "solvedOrigin": [3, 1],
+      "startOrigin": [2, 1],
+      "thickness": 16
+    },
+    {
+      "id": "l3-b",
+      "cells": [
+        [0, 0],
+        [0, 1],
+        [1, 1]
+      ],
+      "solvedOrigin": [3, 2],
+      "startOrigin": [2, 5],
+      "thickness": 20
+    },
+    {
+      "id": "l3-c",
+      "cells": [
+        [0, 0],
+        [1, 0],
+        [1, 1]
+      ],
+      "solvedOrigin": [4, 0],
+      "startOrigin": [5, 1],
+      "thickness": 20
+    },
+    {
+      "id": "t4",
+      "cells": [
+        [0, 1],
+        [1, 0],
+        [1, 1],
+        [1, 2]
+      ],
+      "solvedOrigin": [4, 3],
+      "startOrigin": [5, 3],
+      "thickness": 17
+    },
+    {
+      "id": "mono-b",
+      "cells": [
+        [0, 0]
+      ],
+      "solvedOrigin": [4, 5],
+      "startOrigin": [6, 6],
+      "thickness": 12
+    }
+  ]
+}
