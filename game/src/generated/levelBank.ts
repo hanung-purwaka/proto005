@@ -1513,207 +1513,19 @@ export const levelBank = [
         "cells": [
           [
             0,
-            1
-          ],
-          [
-            0,
             0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 6
-          },
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 4
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 2,
-          "width": 3,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            2
           ],
           [
             0,
             1
           ],
           [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 4
-          },
-          {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "width": 3,
-        "height": 2
-      },
-      {
-        "id": "i4-a",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
             1,
             0
           ],
           [
-            2,
-            0
-          ],
-          [
-            3,
-            0
+            1,
+            1
           ]
         ],
         "localCells": [
@@ -1722,16 +1534,16 @@ export const levelBank = [
             "col": 0
           },
           {
+            "row": 0,
+            "col": 1
+          },
+          {
             "row": 1,
             "col": 0
           },
           {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
+            "row": 1,
+            "col": 1
           }
         ],
         "solvedOrigin": {
@@ -1748,398 +1560,132 @@ export const levelBank = [
             "col": 1
           },
           {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 4,
-            "col": 0
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
             "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
-            "row": 6,
-            "col": 4
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "z4",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 2,
             "col": 2
           },
           {
-            "row": 3,
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
             "col": 2
           }
         ],
         "startCells": [
           {
             "row": 1,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "i4-b",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            3,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
             "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 2,
-          "col": 6
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
-          },
-          {
-            "row": 5,
-            "col": 6
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 6
-          },
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "l3-a",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
           },
           {
             "row": 1,
             "col": 1
           },
           {
-            "row": 1,
+            "row": 2,
             "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 5
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 5
           },
           {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 5
+            "row": 2,
+            "col": 1
           }
         ],
         "width": 2,
         "height": 2
+      },
+      {
+        "id": "l4-a",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 2
+        },
+        "solvedCells": [
+          {
+            "row": 0,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 2,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 2,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 3
+          }
+        ],
+        "width": 2,
+        "height": 3
       },
       {
         "id": "i3",
@@ -2181,186 +1727,140 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 3,
-          "col": 3
+          "row": 0,
+          "col": 4
         },
         "startOrigin": {
-          "row": 4,
-          "col": 3
+          "row": 1,
+          "col": 4
         },
         "solvedCells": [
           {
-            "row": 3,
-            "col": 3
+            "row": 0,
+            "col": 4
           },
           {
-            "row": 4,
-            "col": 3
+            "row": 1,
+            "col": 4
           },
           {
-            "row": 5,
-            "col": 3
+            "row": 2,
+            "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 4,
-            "col": 3
+            "row": 1,
+            "col": 4
           },
           {
-            "row": 5,
-            "col": 3
+            "row": 2,
+            "col": 4
           },
           {
-            "row": 6,
-            "col": 3
+            "row": 3,
+            "col": 4
           }
         ],
         "width": 1,
         "height": 3
       },
       {
-        "id": "l3-b",
-        "thickness": 20,
+        "id": "l4-b",
+        "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 1,
+          "maxRow": 2,
           "maxCol": 1,
           "width": 2,
-          "height": 2
+          "height": 3
         },
         "cells": [
           [
             0,
-            1
+            0
           ],
           [
             0,
-            0
+            1
           ],
           [
             1,
             0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 4,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            1
           ],
           [
-            0,
+            2,
             0
           ]
         ],
         "localCells": [
           {
             "row": 0,
-            "col": 1
+            "col": 0
           },
           {
             "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
             "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 5,
-          "col": 4
+          "row": 0,
+          "col": 5
         },
         "startOrigin": {
-          "row": 6,
-          "col": 0
+          "row": 0,
+          "col": 5
         },
         "solvedCells": [
           {
-            "row": 5,
+            "row": 0,
             "col": 5
           },
           {
-            "row": 5,
-            "col": 4
+            "row": 0,
+            "col": 6
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 2,
+            "col": 5
           }
         ],
         "startCells": [
           {
-            "row": 6,
-            "col": 1
+            "row": 0,
+            "col": 5
           },
           {
-            "row": 6,
-            "col": 0
+            "row": 0,
+            "col": 6
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 2,
+            "col": 5
           }
         ],
         "width": 2,
-        "height": 1
+        "height": 3
       },
       {
-        "id": "mono",
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -2383,14 +1883,396 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 5,
+          "row": 1,
+          "col": 6
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 6
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 6
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "domino",
+        "thickness": 14,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 0,
+          "width": 1,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 0
+          },
+          {
+            "row": 4,
+            "col": 0
+          }
+        ],
+        "width": 1,
+        "height": 2
+      },
+      {
+        "id": "l3-a",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 6
+          },
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 4
+          },
+          {
+            "row": 4,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "z4",
+        "thickness": 16,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
           "col": 2
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 4,
+            "col": 2
+          },
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 5,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "l3-b",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 4,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 4,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "l3-c",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 1
         },
         "startOrigin": {
           "row": 5,
           "col": 0
         },
         "solvedCells": [
+          {
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
           {
             "row": 5,
             "col": 2
@@ -2400,6 +2282,154 @@ export const levelBank = [
           {
             "row": 5,
             "col": 0
+          },
+          {
+            "row": 6,
+            "col": 0
+          },
+          {
+            "row": 6,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "t4",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 2,
+          "width": 3,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 2
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 6
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 6
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 3
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 3
           }
         ],
         "width": 1,
@@ -2426,290 +2456,8 @@ export const levelBank = [
     },
     "pieces": [
       {
-        "id": "square",
+        "id": "l4-a",
         "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 0
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 0
-          },
-          {
-            "row": 6,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 0
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 4,
-            "col": 2
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 2,
-          "width": 3,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            2
-          ],
-          [
-            0,
-            2
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 2
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 2
-          },
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 5,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "width": 3,
-        "height": 2
-      },
-      {
-        "id": "i4-a",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            3,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 2,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
@@ -2720,225 +2468,37 @@ export const levelBank = [
         },
         "cells": [
           [
-            2,
-            1
-          ],
-          [
-            1,
+            0,
             0
-          ],
-          [
-            1,
-            1
           ],
           [
             0,
             1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 3,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 2
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "z4",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            2,
-            0
           ],
           [
             1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 3
-        },
-        "startOrigin": {
-          "row": 3,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "i4-b",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            3,
             0
           ],
           [
             2,
             0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
           ]
         ],
         "localCells": [
           {
-            "row": 3,
+            "row": 0,
             "col": 0
           },
           {
-            "row": 2,
-            "col": 0
+            "row": 0,
+            "col": 1
           },
           {
             "row": 1,
             "col": 0
           },
           {
-            "row": 0,
+            "row": 2,
             "col": 0
           }
         ],
@@ -2947,50 +2507,50 @@ export const levelBank = [
           "col": 0
         },
         "startOrigin": {
-          "row": 3,
-          "col": 0
+          "row": 2,
+          "col": 1
         },
         "solvedCells": [
           {
-            "row": 4,
+            "row": 1,
             "col": 0
           },
           {
-            "row": 3,
-            "col": 0
+            "row": 1,
+            "col": 1
           },
           {
             "row": 2,
             "col": 0
           },
           {
-            "row": 1,
+            "row": 3,
             "col": 0
           }
         ],
         "startCells": [
           {
-            "row": 6,
-            "col": 0
+            "row": 2,
+            "col": 1
           },
           {
-            "row": 5,
-            "col": 0
-          },
-          {
-            "row": 4,
-            "col": 0
+            "row": 2,
+            "col": 2
           },
           {
             "row": 3,
-            "col": 0
+            "col": 1
+          },
+          {
+            "row": 4,
+            "col": 1
           }
         ],
-        "width": 1,
-        "height": 4
+        "width": 2,
+        "height": 3
       },
       {
-        "id": "l3-a",
+        "id": "l3",
         "thickness": 20,
         "bounds": {
           "minRow": 0,
@@ -3002,44 +2562,44 @@ export const levelBank = [
         },
         "cells": [
           [
+            0,
+            1
+          ],
+          [
             1,
             0
           ],
           [
-            0,
-            0
-          ],
-          [
-            0,
+            1,
             1
           ]
         ],
         "localCells": [
           {
+            "row": 0,
+            "col": 1
+          },
+          {
             "row": 1,
             "col": 0
           },
           {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
+            "row": 1,
             "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 2,
+          "row": 1,
           "col": 1
         },
         "startOrigin": {
           "row": 0,
-          "col": 0
+          "col": 2
         },
         "solvedCells": [
           {
-            "row": 3,
-            "col": 1
+            "row": 1,
+            "col": 2
           },
           {
             "row": 2,
@@ -3052,16 +2612,16 @@ export const levelBank = [
         ],
         "startCells": [
           {
+            "row": 0,
+            "col": 3
+          },
+          {
             "row": 1,
-            "col": 0
+            "col": 2
           },
           {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
+            "row": 1,
+            "col": 3
           }
         ],
         "width": 2,
@@ -3073,165 +2633,9 @@ export const levelBank = [
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 0,
-          "width": 1,
-          "height": 3
-        },
-        "cells": [
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 3
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 1,
-            "col": 3
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 3
-          }
-        ],
-        "width": 1,
-        "height": 3
-      },
-      {
-        "id": "l3-b",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
           "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
+          "maxCol": 2,
+          "width": 3,
           "height": 1
         },
         "cells": [
@@ -3242,6 +2646,10 @@ export const levelBank = [
           [
             0,
             1
+          ],
+          [
+            0,
+            2
           ]
         ],
         "localCells": [
@@ -3252,11 +2660,195 @@ export const levelBank = [
           {
             "row": 0,
             "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
           }
         ],
         "solvedOrigin": {
           "row": 1,
-          "col": 1
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "width": 3,
+        "height": 1
+      },
+      {
+        "id": "l4-b",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 2,
+            "col": 4
+          },
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 4,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 2,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "t4-a",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 4
         },
         "startOrigin": {
           "row": 0,
@@ -3264,29 +2856,139 @@ export const levelBank = [
         },
         "solvedCells": [
           {
-            "row": 1,
-            "col": 1
+            "row": 2,
+            "col": 5
           },
           {
-            "row": 1,
-            "col": 2
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 5
           }
         ],
         "startCells": [
           {
             "row": 0,
+            "col": 6
+          },
+          {
+            "row": 1,
             "col": 5
           },
           {
-            "row": 0,
+            "row": 1,
+            "col": 6
+          },
+          {
+            "row": 2,
             "col": 6
           }
         ],
         "width": 2,
-        "height": 1
+        "height": 3
       },
       {
-        "id": "mono",
+        "id": "t4-b",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 4,
+            "col": 0
+          },
+          {
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -3309,27 +3011,355 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 4
+          "row": 3,
+          "col": 2
         },
         "startOrigin": {
-          "row": 1,
+          "row": 3,
           "col": 6
         },
         "solvedCells": [
           {
-            "row": 1,
-            "col": 4
+            "row": 3,
+            "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 1,
+            "row": 3,
             "col": 6
           }
         ],
         "width": 1,
         "height": 1
+      },
+      {
+        "id": "z4",
+        "thickness": 16,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 3
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 3
+          },
+          {
+            "row": 6,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 4,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 5
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "l4-c",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 2,
+          "width": 3,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 2
+          }
+        ],
+        "solvedOrigin": {
+          "row": 5,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 0
+          },
+          {
+            "row": 6,
+            "col": 0
+          },
+          {
+            "row": 6,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 6
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "square",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 5,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 6
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 6
+          }
+        ],
+        "width": 2,
+        "height": 2
       }
     ],
     "solvedBounds": {
@@ -3352,102 +3382,8 @@ export const levelBank = [
     },
     "pieces": [
       {
-        "id": "square",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 4
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
+        "id": "t4-a",
+        "thickness": 17,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
@@ -3458,274 +3394,164 @@ export const levelBank = [
         },
         "cells": [
           [
-            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
             2
           ],
           [
             1,
             1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
           ]
         ],
         "localCells": [
           {
-            "row": 1,
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
             "col": 2
           },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 3
+        },
+        "solvedCells": [
           {
             "row": 1,
             "col": 1
           },
           {
             "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
             "col": 2
           },
           {
-            "row": 5,
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 2,
             "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 6,
+            "row": 1,
             "col": 3
           },
           {
-            "row": 6,
-            "col": 2
+            "row": 1,
+            "col": 4
           },
           {
-            "row": 6,
-            "col": 1
+            "row": 1,
+            "col": 5
           },
           {
-            "row": 5,
-            "col": 1
+            "row": 2,
+            "col": 4
           }
         ],
         "width": 3,
         "height": 2
       },
       {
-        "id": "i4-a",
-        "thickness": 16,
+        "id": "i3-a",
+        "thickness": 15,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
+          "maxRow": 0,
+          "maxCol": 2,
+          "width": 3,
+          "height": 1
         },
         "cells": [
           [
-            3,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            1,
+            0,
             0
           ],
           [
             0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 2,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 0
-          },
-          {
-            "row": 4,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            2,
-            0
-          ],
-          [
-            1,
             1
           ],
           [
-            1,
-            0
-          ],
-          [
             0,
-            0
+            2
           ]
         ],
         "localCells": [
           {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
+            "row": 0,
             "col": 0
           },
           {
             "row": 0,
-            "col": 0
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
           }
         ],
         "solvedOrigin": {
-          "row": 3,
+          "row": 1,
           "col": 4
         },
         "startOrigin": {
           "row": 0,
-          "col": 4
+          "col": 0
         },
         "solvedCells": [
           {
-            "row": 5,
+            "row": 1,
             "col": 4
           },
           {
-            "row": 4,
+            "row": 1,
             "col": 5
           },
           {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
+            "row": 1,
+            "col": 6
           }
         ],
         "startCells": [
           {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 4
+            "row": 0,
+            "col": 0
           },
           {
             "row": 0,
-            "col": 4
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
           }
         ],
-        "width": 2,
-        "height": 3
+        "width": 3,
+        "height": 1
       },
       {
         "id": "z4",
@@ -3740,77 +3566,77 @@ export const levelBank = [
         },
         "cells": [
           [
-            2,
-            1
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
             0,
             0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
           ]
         ],
         "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 0
+        },
+        "solvedCells": [
           {
             "row": 2,
             "col": 1
           },
           {
-            "row": 1,
+            "row": 3,
             "col": 1
           },
           {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 3,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 4,
+            "row": 3,
             "col": 2
           },
           {
-            "row": 3,
+            "row": 4,
             "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 5,
-            "col": 2
+            "row": 1,
+            "col": 0
           },
           {
-            "row": 4,
-            "col": 2
+            "row": 2,
+            "col": 0
           },
           {
-            "row": 4,
+            "row": 2,
             "col": 1
           },
           {
@@ -3822,63 +3648,141 @@ export const levelBank = [
         "height": 3
       },
       {
-        "id": "i4-b",
-        "thickness": 16,
+        "id": "i3-b",
+        "thickness": 15,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
+          "maxRow": 0,
+          "maxCol": 2,
+          "width": 3,
+          "height": 1
         },
         "cells": [
           [
-            3,
+            0,
             0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 2,
+            "col": 4
+          },
+          {
+            "row": 2,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 6
+          }
+        ],
+        "width": 3,
+        "height": 1
+      },
+      {
+        "id": "l4",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
           ],
           [
             2,
             0
           ],
           [
-            1,
-            0
-          ],
-          [
-            0,
-            0
+            2,
+            1
           ]
         ],
         "localCells": [
           {
-            "row": 3,
-            "col": 0
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
           },
           {
             "row": 2,
             "col": 0
           },
           {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
+            "row": 2,
+            "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 6
+          "row": 2,
+          "col": 5
         },
         "startOrigin": {
-          "row": 3,
-          "col": 6
+          "row": 2,
+          "col": 5
         },
         "solvedCells": [
           {
-            "row": 4,
+            "row": 2,
             "col": 6
           },
           {
@@ -3886,34 +3790,34 @@ export const levelBank = [
             "col": 6
           },
           {
-            "row": 2,
-            "col": 6
+            "row": 4,
+            "col": 5
           },
           {
-            "row": 1,
+            "row": 4,
             "col": 6
           }
         ],
         "startCells": [
           {
-            "row": 6,
-            "col": 6
-          },
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 4,
+            "row": 2,
             "col": 6
           },
           {
             "row": 3,
             "col": 6
+          },
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 6
           }
         ],
-        "width": 1,
-        "height": 4
+        "width": 2,
+        "height": 3
       },
       {
         "id": "l3-a",
@@ -3928,117 +3832,39 @@ export const levelBank = [
         },
         "cells": [
           [
-            1,
-            1
+            0,
+            0
           ],
           [
             0,
             1
           ],
           [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 2,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 0,
-            "col": 6
-          },
-          {
-            "row": 0,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "i3",
-        "thickness": 15,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 0,
-          "width": 1,
-          "height": 3
-        },
-        "cells": [
-          [
-            2,
-            0
-          ],
-          [
             1,
-            0
-          ],
-          [
-            0,
-            0
+            1
           ]
         ],
         "localCells": [
           {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
+            "row": 0,
             "col": 0
           },
           {
             "row": 0,
-            "col": 0
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 1,
+          "row": 3,
           "col": 3
         },
         "startOrigin": {
-          "row": 0,
-          "col": 3
+          "row": 3,
+          "col": 2
         },
         "solvedCells": [
           {
@@ -4046,173 +3872,33 @@ export const levelBank = [
             "col": 3
           },
           {
-            "row": 2,
-            "col": 3
+            "row": 3,
+            "col": 4
           },
           {
-            "row": 1,
-            "col": 3
+            "row": 4,
+            "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 3
-          }
-        ],
-        "width": 1,
-        "height": 3
-      },
-      {
-        "id": "l3-b",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 2,
+            "row": 3,
             "col": 2
           },
           {
-            "row": 2,
-            "col": 1
+            "row": 3,
+            "col": 3
           },
           {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
+            "row": 4,
+            "col": 3
           }
         ],
         "width": 2,
         "height": 2
       },
       {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "width": 2,
-        "height": 1
-      },
-      {
-        "id": "mono",
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -4235,23 +3921,397 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 2
+          "row": 3,
+          "col": 5
         },
         "startOrigin": {
-          "row": 1,
+          "row": 6,
+          "col": 6
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 6
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "l3-b",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 3,
           "col": 0
         },
         "solvedCells": [
           {
-            "row": 1,
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 5,
             "col": 2
           }
         ],
         "startCells": [
           {
+            "row": 3,
+            "col": 0
+          },
+          {
+            "row": 4,
+            "col": 0
+          },
+          {
+            "row": 4,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "t4-b",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
             "row": 1,
             "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 2
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 5,
+            "col": 3
+          },
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 3
+          },
+          {
+            "row": 6,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "square",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 5,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 6
+          },
+          {
+            "row": 6,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "domino",
+        "thickness": 14,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 1,
+          "width": 2,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 6,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 6,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 6,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 0
+          },
+          {
+            "row": 6,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 1
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 6,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 6
+        },
+        "solvedCells": [
+          {
+            "row": 6,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 6
           }
         ],
         "width": 1,
@@ -8719,374 +8779,92 @@ export const levelBank = [
         "cells": [
           [
             0,
-            0
+            1
           ],
           [
             0,
-            1
-          ],
-          [
-            1,
             0
           ],
           [
             1,
             1
+          ],
+          [
+            1,
+            0
           ]
         ],
         "localCells": [
           {
             "row": 0,
-            "col": 0
+            "col": 1
           },
           {
             "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
             "col": 0
           },
           {
             "row": 1,
             "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
           }
         ],
         "solvedOrigin": {
           "row": 0,
-          "col": 0
+          "col": 4
         },
         "startOrigin": {
           "row": 1,
-          "col": 1
+          "col": 5
         },
         "solvedCells": [
           {
             "row": 0,
-            "col": 0
+            "col": 5
           },
           {
             "row": 0,
-            "col": 1
+            "col": 4
           },
           {
             "row": 1,
-            "col": 0
+            "col": 5
           },
           {
             "row": 1,
-            "col": 1
+            "col": 4
           }
         ],
         "startCells": [
           {
             "row": 1,
-            "col": 1
+            "col": 6
           },
           {
             "row": 1,
-            "col": 2
+            "col": 5
           },
           {
             "row": 2,
-            "col": 1
+            "col": 6
           },
           {
             "row": 2,
-            "col": 2
+            "col": 5
           }
         ],
         "width": 2,
         "height": 2
       },
       {
-        "id": "l4",
+        "id": "l4-a",
         "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 2,
-          "width": 3,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            2
-          ],
-          [
-            1,
-            2
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 2
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 4
-          },
-          {
-            "row": 1,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 4
-          },
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "width": 3,
-        "height": 2
-      },
-      {
-        "id": "i4-a",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            3,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            2,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 3,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 5,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 2
-          },
-          {
-            "row": 6,
-            "col": 2
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "z4",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
           "maxRow": 2,
           "maxCol": 1,
           "width": 2,
@@ -9102,12 +8880,12 @@ export const levelBank = [
             0
           ],
           [
-            1,
+            2,
             1
           ],
           [
             2,
-            1
+            0
           ]
         ],
         "localCells": [
@@ -9120,44 +8898,48 @@ export const levelBank = [
             "col": 0
           },
           {
-            "row": 1,
+            "row": 2,
             "col": 1
           },
           {
             "row": 2,
-            "col": 1
+            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 1,
+          "row": 0,
           "col": 3
         },
         "startOrigin": {
-          "row": 1,
-          "col": 4
+          "row": 0,
+          "col": 3
         },
         "solvedCells": [
+          {
+            "row": 0,
+            "col": 3
+          },
           {
             "row": 1,
             "col": 3
           },
           {
             "row": 2,
-            "col": 3
+            "col": 4
           },
           {
             "row": 2,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
+            "col": 3
           }
         ],
         "startCells": [
           {
+            "row": 0,
+            "col": 3
+          },
+          {
             "row": 1,
-            "col": 4
+            "col": 3
           },
           {
             "row": 2,
@@ -9165,187 +8947,11 @@ export const levelBank = [
           },
           {
             "row": 2,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
+            "col": 3
           }
         ],
         "width": 2,
         "height": 3
-      },
-      {
-        "id": "i4-b",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            3,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 2,
-          "col": 0
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 4,
-            "col": 0
-          },
-          {
-            "row": 5,
-            "col": 0
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "l3-a",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 1
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 4,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 0
-          },
-          {
-            "row": 6,
-            "col": 0
-          },
-          {
-            "row": 6,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 2
       },
       {
         "id": "i3",
@@ -9387,186 +8993,140 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 3,
-          "col": 3
+          "row": 0,
+          "col": 2
         },
         "startOrigin": {
-          "row": 4,
-          "col": 3
+          "row": 1,
+          "col": 2
         },
         "solvedCells": [
           {
-            "row": 3,
-            "col": 3
+            "row": 0,
+            "col": 2
           },
           {
-            "row": 4,
-            "col": 3
+            "row": 1,
+            "col": 2
           },
           {
-            "row": 5,
-            "col": 3
+            "row": 2,
+            "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 4,
-            "col": 3
+            "row": 1,
+            "col": 2
           },
           {
-            "row": 5,
-            "col": 3
+            "row": 2,
+            "col": 2
           },
           {
-            "row": 6,
-            "col": 3
+            "row": 3,
+            "col": 2
           }
         ],
         "width": 1,
         "height": 3
       },
       {
-        "id": "l3-b",
-        "thickness": 20,
+        "id": "l4-b",
+        "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 1,
+          "maxRow": 2,
           "maxCol": 1,
           "width": 2,
-          "height": 2
+          "height": 3
         },
         "cells": [
           [
             0,
-            0
+            1
           ],
           [
             0,
-            1
+            0
           ],
           [
             1,
             1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            0
           ],
           [
-            0,
+            2,
             1
           ]
         ],
         "localCells": [
           {
             "row": 0,
-            "col": 0
+            "col": 1
           },
           {
             "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
             "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 5,
-          "col": 1
+          "row": 0,
+          "col": 0
         },
         "startOrigin": {
-          "row": 6,
-          "col": 5
+          "row": 0,
+          "col": 0
         },
         "solvedCells": [
           {
-            "row": 5,
+            "row": 0,
             "col": 1
           },
           {
-            "row": 5,
-            "col": 2
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
           }
         ],
         "startCells": [
           {
-            "row": 6,
-            "col": 5
+            "row": 0,
+            "col": 1
           },
           {
-            "row": 6,
-            "col": 6
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
           }
         ],
         "width": 2,
-        "height": 1
+        "height": 3
       },
       {
-        "id": "mono",
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -9589,14 +9149,396 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 5,
+          "row": 1,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 0
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "domino",
+        "thickness": 14,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 0,
+          "width": 1,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 6
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 6
+          },
+          {
+            "row": 4,
+            "col": 6
+          }
+        ],
+        "width": 1,
+        "height": 2
+      },
+      {
+        "id": "l3-a",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 3,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 4,
+            "col": 2
+          },
+          {
+            "row": 4,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "z4",
+        "thickness": 16,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 4,
+            "col": 4
+          },
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 5,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "l3-b",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 4,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 4,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "l3-c",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
           "col": 4
         },
         "startOrigin": {
           "row": 5,
-          "col": 6
+          "col": 5
         },
         "solvedCells": [
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
           {
             "row": 5,
             "col": 4
@@ -9606,6 +9548,154 @@ export const levelBank = [
           {
             "row": 5,
             "col": 6
+          },
+          {
+            "row": 6,
+            "col": 6
+          },
+          {
+            "row": 6,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "t4",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 2,
+          "width": 3,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 0
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 3
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 3
           }
         ],
         "width": 1,
@@ -9645,233 +9735,45 @@ export const levelBank = [
         "cells": [
           [
             1,
-            1
+            0
           ],
           [
             1,
-            0
-          ],
-          [
-            0,
             1
           ],
           [
             0,
             0
+          ],
+          [
+            0,
+            1
           ]
         ],
         "localCells": [
           {
             "row": 1,
-            "col": 1
+            "col": 0
           },
           {
             "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
             "col": 1
           },
           {
             "row": 0,
             "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
           }
         ],
         "solvedOrigin": {
           "row": 5,
-          "col": 5
+          "col": 1
         },
         "startOrigin": {
           "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 4
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 2,
-          "width": 3,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            2
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 2
-          },
-          {
-            "row": 5,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 2
-          },
-          {
-            "row": 6,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "width": 3,
-        "height": 2
-      },
-      {
-        "id": "i4-a",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            3,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 2,
           "col": 0
         },
         "solvedCells": [
@@ -9880,16 +9782,16 @@ export const levelBank = [
             "col": 1
           },
           {
+            "row": 6,
+            "col": 2
+          },
+          {
             "row": 5,
             "col": 1
           },
           {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
+            "row": 5,
+            "col": 2
           }
         ],
         "startCells": [
@@ -9898,118 +9800,24 @@ export const levelBank = [
             "col": 0
           },
           {
-            "row": 4,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
+            "row": 5,
             "col": 1
           },
           {
-            "row": 1,
+            "row": 4,
             "col": 0
           },
           {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
             "row": 4,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 4
-          },
-          {
-            "row": 0,
-            "col": 4
+            "col": 1
           }
         ],
         "width": 2,
-        "height": 3
+        "height": 2
       },
       {
-        "id": "z4",
-        "thickness": 16,
+        "id": "l4-a",
+        "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
@@ -10028,12 +9836,12 @@ export const levelBank = [
             1
           ],
           [
-            1,
+            0,
             0
           ],
           [
             0,
-            0
+            1
           ]
         ],
         "localCells": [
@@ -10046,232 +9854,60 @@ export const levelBank = [
             "col": 1
           },
           {
-            "row": 1,
+            "row": 0,
             "col": 0
           },
           {
             "row": 0,
-            "col": 0
+            "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 3,
+          "row": 4,
           "col": 2
         },
         "startOrigin": {
-          "row": 3,
-          "col": 1
+          "row": 4,
+          "col": 2
         },
         "solvedCells": [
+          {
+            "row": 6,
+            "col": 3
+          },
           {
             "row": 5,
             "col": 3
           },
           {
             "row": 4,
+            "col": 2
+          },
+          {
+            "row": 4,
             "col": 3
-          },
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 3,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "i4-b",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            3,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 6
-        },
-        "startOrigin": {
-          "row": 3,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 4,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 1,
-            "col": 6
           }
         ],
         "startCells": [
           {
             "row": 6,
-            "col": 6
+            "col": 3
           },
           {
             "row": 5,
-            "col": 6
+            "col": 3
           },
           {
             "row": 4,
-            "col": 6
+            "col": 2
           },
           {
-            "row": 3,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "l3-a",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            1
-          ],
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 2,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 0,
-            "col": 6
-          },
-          {
-            "row": 0,
-            "col": 5
+            "row": 4,
+            "col": 3
           }
         ],
         "width": 2,
-        "height": 2
+        "height": 3
       },
       {
         "id": "i3",
@@ -10313,58 +9949,62 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 3
+          "row": 4,
+          "col": 4
         },
         "startOrigin": {
-          "row": 0,
-          "col": 3
+          "row": 3,
+          "col": 4
         },
         "solvedCells": [
           {
-            "row": 3,
-            "col": 3
+            "row": 6,
+            "col": 4
           },
           {
-            "row": 2,
-            "col": 3
+            "row": 5,
+            "col": 4
           },
           {
-            "row": 1,
-            "col": 3
+            "row": 4,
+            "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 2,
-            "col": 3
+            "row": 5,
+            "col": 4
           },
           {
-            "row": 1,
-            "col": 3
+            "row": 4,
+            "col": 4
           },
           {
-            "row": 0,
-            "col": 3
+            "row": 3,
+            "col": 4
           }
         ],
         "width": 1,
         "height": 3
       },
       {
-        "id": "l3-b",
-        "thickness": 20,
+        "id": "l4-b",
+        "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 1,
+          "maxRow": 2,
           "maxCol": 1,
           "width": 2,
-          "height": 2
+          "height": 3
         },
         "cells": [
           [
-            1,
+            2,
+            0
+          ],
+          [
+            2,
             1
           ],
           [
@@ -10378,7 +10018,11 @@ export const levelBank = [
         ],
         "localCells": [
           {
-            "row": 1,
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 2,
             "col": 1
           },
           {
@@ -10391,108 +10035,54 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 1
+          "row": 4,
+          "col": 5
         },
         "startOrigin": {
-          "row": 1,
-          "col": 1
+          "row": 4,
+          "col": 5
         },
         "solvedCells": [
           {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 1,
+            "row": 6,
             "col": 5
           },
           {
-            "row": 1,
-            "col": 4
+            "row": 6,
+            "col": 6
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 5
           }
         ],
         "startCells": [
           {
-            "row": 0,
-            "col": 1
+            "row": 6,
+            "col": 5
           },
           {
-            "row": 0,
-            "col": 0
+            "row": 6,
+            "col": 6
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 5
           }
         ],
         "width": 2,
-        "height": 1
+        "height": 3
       },
       {
-        "id": "mono",
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -10515,14 +10105,396 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
+          "row": 5,
+          "col": 6
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 6
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 6
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "domino",
+        "thickness": 14,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 0,
+          "width": 1,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 0
+          }
+        ],
+        "width": 1,
+        "height": 2
+      },
+      {
+        "id": "l3-a",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 6
+          },
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 2,
+            "col": 4
+          },
+          {
+            "row": 2,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "z4",
+        "thickness": 16,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
           "row": 1,
           "col": 2
         },
         "startOrigin": {
+          "row": 0,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "l3-b",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 2,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "l3-c",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
           "row": 1,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 0,
           "col": 0
         },
         "solvedCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
           {
             "row": 1,
             "col": 2
@@ -10532,6 +10504,154 @@ export const levelBank = [
           {
             "row": 1,
             "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "t4",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 2,
+          "width": 3,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 6
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 6
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 3
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 3
           }
         ],
         "width": 1,
@@ -10571,374 +10691,92 @@ export const levelBank = [
         "cells": [
           [
             1,
-            0
+            1
           ],
           [
             1,
-            1
-          ],
-          [
-            0,
             0
           ],
           [
             0,
             1
+          ],
+          [
+            0,
+            0
           ]
         ],
         "localCells": [
           {
             "row": 1,
-            "col": 0
+            "col": 1
           },
           {
             "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
             "col": 0
           },
           {
             "row": 0,
             "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
           }
         ],
         "solvedOrigin": {
           "row": 5,
-          "col": 0
+          "col": 4
         },
         "startOrigin": {
           "row": 4,
-          "col": 1
+          "col": 5
         },
         "solvedCells": [
           {
             "row": 6,
-            "col": 0
+            "col": 5
           },
           {
             "row": 6,
-            "col": 1
+            "col": 4
           },
           {
             "row": 5,
-            "col": 0
+            "col": 5
           },
           {
             "row": 5,
-            "col": 1
+            "col": 4
           }
         ],
         "startCells": [
           {
             "row": 5,
-            "col": 1
+            "col": 6
           },
           {
             "row": 5,
-            "col": 2
+            "col": 5
           },
           {
             "row": 4,
-            "col": 1
+            "col": 6
           },
           {
             "row": 4,
-            "col": 2
+            "col": 5
           }
         ],
         "width": 2,
         "height": 2
       },
       {
-        "id": "l4",
+        "id": "l4-a",
         "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 2,
-          "width": 3,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            2
-          ],
-          [
-            0,
-            2
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 2
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 2
-          },
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 5,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "width": 3,
-        "height": 2
-      },
-      {
-        "id": "i4-a",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            3,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 2,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            2,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 3,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 2
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "z4",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
           "maxRow": 2,
           "maxCol": 1,
           "width": 2,
@@ -10954,12 +10792,12 @@ export const levelBank = [
             0
           ],
           [
-            1,
+            0,
             1
           ],
           [
             0,
-            1
+            0
           ]
         ],
         "localCells": [
@@ -10972,232 +10810,60 @@ export const levelBank = [
             "col": 0
           },
           {
-            "row": 1,
+            "row": 0,
             "col": 1
           },
           {
             "row": 0,
-            "col": 1
+            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 3,
+          "row": 4,
           "col": 3
         },
         "startOrigin": {
-          "row": 3,
-          "col": 4
+          "row": 4,
+          "col": 3
         },
         "solvedCells": [
+          {
+            "row": 6,
+            "col": 3
+          },
           {
             "row": 5,
             "col": 3
           },
           {
             "row": 4,
+            "col": 4
+          },
+          {
+            "row": 4,
             "col": 3
-          },
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "i4-b",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            3,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 0
-        },
-        "startOrigin": {
-          "row": 3,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 4,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
           }
         ],
         "startCells": [
           {
             "row": 6,
-            "col": 0
+            "col": 3
           },
           {
             "row": 5,
-            "col": 0
+            "col": 3
           },
           {
             "row": 4,
-            "col": 0
+            "col": 4
           },
           {
-            "row": 3,
-            "col": 0
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "l3-a",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 2,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
+            "row": 4,
+            "col": 3
           }
         ],
         "width": 2,
-        "height": 2
+        "height": 3
       },
       {
         "id": "i3",
@@ -11239,58 +10905,62 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 3
+          "row": 4,
+          "col": 2
         },
         "startOrigin": {
-          "row": 0,
-          "col": 3
+          "row": 3,
+          "col": 2
         },
         "solvedCells": [
           {
-            "row": 3,
-            "col": 3
+            "row": 6,
+            "col": 2
           },
           {
-            "row": 2,
-            "col": 3
+            "row": 5,
+            "col": 2
           },
           {
-            "row": 1,
-            "col": 3
+            "row": 4,
+            "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 2,
-            "col": 3
+            "row": 5,
+            "col": 2
           },
           {
-            "row": 1,
-            "col": 3
+            "row": 4,
+            "col": 2
           },
           {
-            "row": 0,
-            "col": 3
+            "row": 3,
+            "col": 2
           }
         ],
         "width": 1,
         "height": 3
       },
       {
-        "id": "l3-b",
-        "thickness": 20,
+        "id": "l4-b",
+        "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 1,
+          "maxRow": 2,
           "maxCol": 1,
           "width": 2,
-          "height": 2
+          "height": 3
         },
         "cells": [
           [
-            1,
+            2,
+            1
+          ],
+          [
+            2,
             0
           ],
           [
@@ -11304,7 +10974,11 @@ export const levelBank = [
         ],
         "localCells": [
           {
-            "row": 1,
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 2,
             "col": 0
           },
           {
@@ -11317,108 +10991,54 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 4
+          "row": 4,
+          "col": 0
         },
         "startOrigin": {
-          "row": 1,
-          "col": 4
+          "row": 4,
+          "col": 0
         },
         "solvedCells": [
           {
-            "row": 2,
-            "col": 4
+            "row": 6,
+            "col": 1
           },
           {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
+            "row": 6,
             "col": 0
           },
           {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "solvedCells": [
-          {
-            "row": 1,
+            "row": 5,
             "col": 1
           },
           {
-            "row": 1,
-            "col": 2
+            "row": 4,
+            "col": 1
           }
         ],
         "startCells": [
           {
-            "row": 0,
-            "col": 5
+            "row": 6,
+            "col": 1
           },
           {
-            "row": 0,
-            "col": 6
+            "row": 6,
+            "col": 0
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 4,
+            "col": 1
           }
         ],
         "width": 2,
-        "height": 1
+        "height": 3
       },
       {
-        "id": "mono",
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -11441,14 +11061,396 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
+          "row": 5,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 0
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "domino",
+        "thickness": 14,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 0,
+          "width": 1,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 6
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 6
+          },
+          {
+            "row": 2,
+            "col": 6
+          }
+        ],
+        "width": 1,
+        "height": 2
+      },
+      {
+        "id": "l3-a",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 0
+          },
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 3,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "z4",
+        "thickness": 16,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 2,
+            "col": 4
+          },
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "l3-b",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 2,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "l3-c",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
           "row": 1,
           "col": 4
         },
         "startOrigin": {
-          "row": 1,
-          "col": 6
+          "row": 0,
+          "col": 5
         },
         "solvedCells": [
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
           {
             "row": 1,
             "col": 4
@@ -11458,6 +11460,154 @@ export const levelBank = [
           {
             "row": 1,
             "col": 6
+          },
+          {
+            "row": 0,
+            "col": 6
+          },
+          {
+            "row": 0,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "t4",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 2,
+          "width": 3,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 3
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 3
           }
         ],
         "width": 1,
@@ -11484,290 +11634,8 @@ export const levelBank = [
     },
     "pieces": [
       {
-        "id": "square",
+        "id": "l4-a",
         "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 4
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 2,
-          "width": 3,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            2
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 2
-          },
-          {
-            "row": 5,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 2
-          },
-          {
-            "row": 6,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "width": 3,
-        "height": 2
-      },
-      {
-        "id": "i4-a",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            3,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 2,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 0
-          },
-          {
-            "row": 4,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
@@ -11778,7 +11646,11 @@ export const levelBank = [
         },
         "cells": [
           [
-            2,
+            0,
+            1
+          ],
+          [
+            0,
             0
           ],
           [
@@ -11786,269 +11658,77 @@ export const levelBank = [
             1
           ],
           [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 4
-          },
-          {
-            "row": 0,
-            "col": 4
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "z4",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
             2,
             1
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
           ]
         ],
         "localCells": [
           {
-            "row": 2,
+            "row": 0,
             "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
           },
           {
             "row": 0,
             "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 3,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 3,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "i4-b",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            3,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
           },
           {
             "row": 1,
-            "col": 0
+            "col": 1
           },
           {
-            "row": 0,
-            "col": 0
+            "row": 2,
+            "col": 1
           }
         ],
         "solvedOrigin": {
           "row": 1,
-          "col": 6
+          "col": 5
         },
         "startOrigin": {
-          "row": 3,
-          "col": 6
+          "row": 2,
+          "col": 4
         },
         "solvedCells": [
           {
-            "row": 4,
+            "row": 1,
             "col": 6
           },
           {
-            "row": 3,
-            "col": 6
+            "row": 1,
+            "col": 5
           },
           {
             "row": 2,
             "col": 6
           },
           {
-            "row": 1,
+            "row": 3,
             "col": 6
           }
         ],
         "startCells": [
           {
-            "row": 6,
-            "col": 6
+            "row": 2,
+            "col": 5
           },
           {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
+            "row": 2,
+            "col": 4
           },
           {
             "row": 3,
-            "col": 6
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 5
           }
         ],
-        "width": 1,
-        "height": 4
+        "width": 2,
+        "height": 3
       },
       {
-        "id": "l3-a",
+        "id": "l3",
         "thickness": 20,
         "bounds": {
           "minRow": 0,
@@ -12060,44 +11740,44 @@ export const levelBank = [
         },
         "cells": [
           [
+            0,
+            0
+          ],
+          [
             1,
             1
           ],
           [
-            0,
-            1
-          ],
-          [
-            0,
+            1,
             0
           ]
         ],
         "localCells": [
           {
+            "row": 0,
+            "col": 0
+          },
+          {
             "row": 1,
             "col": 1
           },
           {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
+            "row": 1,
             "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 2,
+          "row": 1,
           "col": 4
         },
         "startOrigin": {
           "row": 0,
-          "col": 5
+          "col": 3
         },
         "solvedCells": [
           {
-            "row": 3,
-            "col": 5
+            "row": 1,
+            "col": 4
           },
           {
             "row": 2,
@@ -12110,16 +11790,16 @@ export const levelBank = [
         ],
         "startCells": [
           {
+            "row": 0,
+            "col": 3
+          },
+          {
             "row": 1,
-            "col": 6
+            "col": 4
           },
           {
-            "row": 0,
-            "col": 6
-          },
-          {
-            "row": 0,
-            "col": 5
+            "row": 1,
+            "col": 3
           }
         ],
         "width": 2,
@@ -12131,170 +11811,18 @@ export const levelBank = [
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 0,
-          "width": 1,
-          "height": 3
-        },
-        "cells": [
-          [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 3
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 1,
-            "col": 3
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 3
-          }
-        ],
-        "width": 1,
-        "height": 3
-      },
-      {
-        "id": "l3-b",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
           "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
+          "maxCol": 2,
+          "width": 3,
           "height": 1
         },
         "cells": [
           [
             0,
+            2
+          ],
+          [
+            0,
             1
           ],
           [
@@ -12303,6 +11831,10 @@ export const levelBank = [
           ]
         ],
         "localCells": [
+          {
+            "row": 0,
+            "col": 2
+          },
           {
             "row": 0,
             "col": 1
@@ -12314,7 +11846,187 @@ export const levelBank = [
         ],
         "solvedOrigin": {
           "row": 1,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 0,
           "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 6
+          },
+          {
+            "row": 0,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 4
+          }
+        ],
+        "width": 3,
+        "height": 1
+      },
+      {
+        "id": "l4-b",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 2,
+            "col": 2
+          },
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 4,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "t4-a",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 1
         },
         "startOrigin": {
           "row": 0,
@@ -12322,29 +12034,139 @@ export const levelBank = [
         },
         "solvedCells": [
           {
-            "row": 1,
-            "col": 5
+            "row": 2,
+            "col": 1
           },
           {
-            "row": 1,
-            "col": 4
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 4,
+            "col": 1
           }
         ],
         "startCells": [
           {
             "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
             "col": 1
           },
           {
-            "row": 0,
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
             "col": 0
           }
         ],
         "width": 2,
-        "height": 1
+        "height": 3
       },
       {
-        "id": "mono",
+        "id": "t4-b",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 6
+          },
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -12367,27 +12189,355 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 2
+          "row": 3,
+          "col": 4
         },
         "startOrigin": {
-          "row": 1,
+          "row": 3,
           "col": 0
         },
         "solvedCells": [
           {
-            "row": 1,
-            "col": 2
+            "row": 3,
+            "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 1,
+            "row": 3,
             "col": 0
           }
         ],
         "width": 1,
         "height": 1
+      },
+      {
+        "id": "z4",
+        "thickness": 16,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 2
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 3
+          },
+          {
+            "row": 6,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 4,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "l4-c",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 2,
+          "width": 3,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 5,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 6
+          },
+          {
+            "row": 6,
+            "col": 6
+          },
+          {
+            "row": 6,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 0
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "square",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 5,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 4,
+            "col": 0
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 0
+          }
+        ],
+        "width": 2,
+        "height": 2
       }
     ],
     "solvedBounds": {
@@ -12410,23 +12560,23 @@ export const levelBank = [
     },
     "pieces": [
       {
-        "id": "square",
+        "id": "l4-a",
         "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 1,
+          "maxRow": 2,
           "maxCol": 1,
           "width": 2,
-          "height": 2
+          "height": 3
         },
         "cells": [
           [
-            0,
+            2,
             0
           ],
           [
-            0,
+            2,
             1
           ],
           [
@@ -12434,17 +12584,17 @@ export const levelBank = [
             0
           ],
           [
-            1,
-            1
+            0,
+            0
           ]
         ],
         "localCells": [
           {
-            "row": 0,
+            "row": 2,
             "col": 0
           },
           {
-            "row": 0,
+            "row": 2,
             "col": 1
           },
           {
@@ -12452,529 +12602,59 @@ export const levelBank = [
             "col": 0
           },
           {
-            "row": 1,
-            "col": 1
+            "row": 0,
+            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 0,
+          "row": 3,
           "col": 0
         },
         "startOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 2
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 2,
-          "width": 3,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            2
-          ],
-          [
-            1,
-            2
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 2
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 4
-          },
-          {
-            "row": 1,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 4
-          },
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "width": 3,
-        "height": 2
-      },
-      {
-        "id": "i4-a",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            3,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            2,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 3,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 5,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 2
-          },
-          {
-            "row": 6,
-            "col": 2
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "z4",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            2,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 3
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "i4-b",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            3,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
           "row": 2,
-          "col": 0
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 0
+          "col": 1
         },
         "solvedCells": [
           {
-            "row": 2,
+            "row": 5,
             "col": 0
           },
           {
-            "row": 3,
-            "col": 0
+            "row": 5,
+            "col": 1
           },
           {
             "row": 4,
             "col": 0
           },
           {
-            "row": 5,
+            "row": 3,
             "col": 0
           }
         ],
         "startCells": [
           {
-            "row": 0,
-            "col": 0
+            "row": 4,
+            "col": 1
           },
           {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
+            "row": 4,
+            "col": 2
           },
           {
             "row": 3,
-            "col": 0
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
           }
         ],
-        "width": 1,
-        "height": 4
+        "width": 2,
+        "height": 3
       },
       {
-        "id": "l3-a",
+        "id": "l3",
         "thickness": 20,
         "bounds": {
           "minRow": 0,
@@ -12986,44 +12666,44 @@ export const levelBank = [
         },
         "cells": [
           [
+            1,
+            1
+          ],
+          [
             0,
             0
           ],
           [
-            1,
-            0
-          ],
-          [
-            1,
+            0,
             1
           ]
         ],
         "localCells": [
           {
+            "row": 1,
+            "col": 1
+          },
+          {
             "row": 0,
             "col": 0
           },
           {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
+            "row": 0,
             "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 3,
+          "row": 4,
           "col": 1
         },
         "startOrigin": {
           "row": 5,
-          "col": 0
+          "col": 2
         },
         "solvedCells": [
           {
-            "row": 3,
-            "col": 1
+            "row": 5,
+            "col": 2
           },
           {
             "row": 4,
@@ -13036,16 +12716,16 @@ export const levelBank = [
         ],
         "startCells": [
           {
+            "row": 6,
+            "col": 3
+          },
+          {
             "row": 5,
-            "col": 0
+            "col": 2
           },
           {
-            "row": 6,
-            "col": 0
-          },
-          {
-            "row": 6,
-            "col": 1
+            "row": 5,
+            "col": 3
           }
         ],
         "width": 2,
@@ -13057,165 +12737,9 @@ export const levelBank = [
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 0,
-          "width": 1,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 3
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 5,
-            "col": 3
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 5,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 3
-          }
-        ],
-        "width": 1,
-        "height": 3
-      },
-      {
-        "id": "l3-b",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
           "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
+          "maxCol": 2,
+          "width": 3,
           "height": 1
         },
         "cells": [
@@ -13226,6 +12750,10 @@ export const levelBank = [
           [
             0,
             1
+          ],
+          [
+            0,
+            2
           ]
         ],
         "localCells": [
@@ -13236,41 +12764,335 @@ export const levelBank = [
           {
             "row": 0,
             "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
           }
         ],
         "solvedOrigin": {
           "row": 5,
-          "col": 1
+          "col": 3
         },
         "startOrigin": {
           "row": 6,
-          "col": 5
+          "col": 0
         },
         "solvedCells": [
           {
             "row": 5,
-            "col": 1
+            "col": 3
           },
           {
             "row": 5,
-            "col": 2
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 5
           }
         ],
         "startCells": [
           {
             "row": 6,
-            "col": 5
+            "col": 0
           },
           {
             "row": 6,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 2
+          }
+        ],
+        "width": 3,
+        "height": 1
+      },
+      {
+        "id": "l4-b",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 4,
+            "col": 4
+          },
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 2,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 4,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "t4-a",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 2,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 6
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 6
+          },
+          {
+            "row": 4,
             "col": 6
           }
         ],
         "width": 2,
-        "height": 1
+        "height": 3
       },
       {
-        "id": "mono",
+        "id": "t4-b",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -13293,27 +13115,355 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 5,
-          "col": 4
+          "row": 3,
+          "col": 2
         },
         "startOrigin": {
-          "row": 5,
+          "row": 3,
           "col": 6
         },
         "solvedCells": [
           {
-            "row": 5,
-            "col": 4
+            "row": 3,
+            "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 5,
+            "row": 3,
             "col": 6
           }
         ],
         "width": 1,
         "height": 1
+      },
+      {
+        "id": "z4",
+        "thickness": 16,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 3
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 0,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 2,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 5
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "l4-c",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 2,
+          "width": 3,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 6
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "square",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 2,
+            "col": 6
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 6
+          }
+        ],
+        "width": 2,
+        "height": 2
       }
     ],
     "solvedBounds": {
@@ -13336,8 +13486,102 @@ export const levelBank = [
     },
     "pieces": [
       {
-        "id": "square",
+        "id": "l4-a",
         "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 3,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 6
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 6
+          },
+          {
+            "row": 3,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 4,
+            "col": 4
+          },
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 2,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "l3",
+        "thickness": 20,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
@@ -13348,97 +13592,81 @@ export const levelBank = [
         },
         "cells": [
           [
-            0,
-            1
-          ],
-          [
-            0,
+            1,
             0
           ],
           [
-            1,
+            0,
             1
           ],
           [
-            1,
+            0,
             0
           ]
         ],
         "localCells": [
           {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
+            "row": 1,
             "col": 0
           },
           {
-            "row": 1,
+            "row": 0,
             "col": 1
           },
           {
-            "row": 1,
+            "row": 0,
             "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 0,
-          "col": 5
+          "row": 4,
+          "col": 4
         },
         "startOrigin": {
-          "row": 1,
-          "col": 4
+          "row": 5,
+          "col": 3
         },
         "solvedCells": [
           {
-            "row": 0,
-            "col": 6
+            "row": 5,
+            "col": 4
           },
           {
-            "row": 0,
+            "row": 4,
             "col": 5
           },
           {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 1,
-            "col": 5
+            "row": 4,
+            "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 1,
-            "col": 5
+            "row": 6,
+            "col": 3
           },
           {
-            "row": 1,
+            "row": 5,
             "col": 4
           },
           {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 4
+            "row": 5,
+            "col": 3
           }
         ],
         "width": 2,
         "height": 2
       },
       {
-        "id": "l4",
-        "thickness": 18,
+        "id": "i3",
+        "thickness": 15,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 1,
+          "maxRow": 0,
           "maxCol": 2,
           "width": 3,
-          "height": 2
+          "height": 1
         },
         "cells": [
           [
@@ -13452,10 +13680,6 @@ export const levelBank = [
           [
             0,
             0
-          ],
-          [
-            1,
-            0
           ]
         ],
         "localCells": [
@@ -13470,155 +13694,143 @@ export const levelBank = [
           {
             "row": 0,
             "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 0,
-          "col": 2
+          "row": 5,
+          "col": 1
         },
         "startOrigin": {
-          "row": 0,
-          "col": 1
+          "row": 6,
+          "col": 4
         },
         "solvedCells": [
           {
-            "row": 0,
-            "col": 4
-          },
-          {
-            "row": 0,
+            "row": 5,
             "col": 3
           },
           {
-            "row": 0,
+            "row": 5,
             "col": 2
           },
           {
-            "row": 1,
-            "col": 2
+            "row": 5,
+            "col": 1
           }
         ],
         "startCells": [
           {
-            "row": 0,
-            "col": 3
+            "row": 6,
+            "col": 6
           },
           {
-            "row": 0,
-            "col": 2
+            "row": 6,
+            "col": 5
           },
           {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
+            "row": 6,
+            "col": 4
           }
         ],
         "width": 3,
-        "height": 2
+        "height": 1
       },
       {
-        "id": "i4-a",
-        "thickness": 16,
+        "id": "l4-b",
+        "thickness": 18,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
         },
         "cells": [
           [
-            0,
-            0
-          ],
-          [
-            1,
-            0
+            2,
+            1
           ],
           [
             2,
             0
           ],
           [
-            3,
-            0
+            1,
+            1
+          ],
+          [
+            0,
+            1
           ]
         ],
         "localCells": [
           {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
+            "row": 2,
+            "col": 1
           },
           {
             "row": 2,
             "col": 0
           },
           {
-            "row": 3,
-            "col": 0
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 0,
-          "col": 1
+          "row": 2,
+          "col": 2
         },
         "startOrigin": {
-          "row": 1,
-          "col": 0
+          "row": 4,
+          "col": 1
         },
         "solvedCells": [
           {
-            "row": 0,
-            "col": 1
+            "row": 4,
+            "col": 3
           },
           {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
+            "row": 4,
+            "col": 2
           },
           {
             "row": 3,
-            "col": 1
+            "col": 3
+          },
+          {
+            "row": 2,
+            "col": 3
           }
         ],
         "startCells": [
           {
-            "row": 1,
-            "col": 0
+            "row": 6,
+            "col": 2
           },
           {
-            "row": 2,
-            "col": 0
+            "row": 6,
+            "col": 1
           },
           {
-            "row": 3,
-            "col": 0
+            "row": 5,
+            "col": 2
           },
           {
             "row": 4,
-            "col": 0
+            "col": 2
           }
         ],
-        "width": 1,
-        "height": 4
+        "width": 2,
+        "height": 3
       },
       {
-        "id": "t4",
+        "id": "t4-a",
         "thickness": 17,
         "bounds": {
           "minRow": 0,
@@ -13630,7 +13842,7 @@ export const levelBank = [
         },
         "cells": [
           [
-            0,
+            2,
             0
           ],
           [
@@ -13642,561 +13854,171 @@ export const levelBank = [
             0
           ],
           [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 4
-          },
-          {
-            "row": 6,
-            "col": 4
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "z4",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 3,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 3
-      },
-      {
-        "id": "i4-b",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
             0,
             0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            3,
-            0
           ]
         ],
         "localCells": [
           {
-            "row": 0,
+            "row": 2,
             "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
           },
           {
             "row": 1,
             "col": 0
           },
           {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
+            "row": 0,
             "col": 0
           }
         ],
         "solvedOrigin": {
           "row": 2,
-          "col": 6
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
-          },
-          {
-            "row": 5,
-            "col": 6
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 6
-          },
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "l3-a",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 5
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "i3",
-        "thickness": 15,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 0,
-          "width": 1,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 3
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 5,
-            "col": 3
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 5,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 3
-          }
-        ],
-        "width": 1,
-        "height": 3
-      },
-      {
-        "id": "l3-b",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 4,
           "col": 1
         },
         "startOrigin": {
           "row": 4,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 6,
           "col": 0
         },
         "solvedCells": [
           {
-            "row": 5,
-            "col": 5
+            "row": 4,
+            "col": 1
           },
           {
-            "row": 5,
-            "col": 4
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 3,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 1
           }
         ],
         "startCells": [
           {
             "row": 6,
+            "col": 0
+          },
+          {
+            "row": 5,
             "col": 1
           },
           {
-            "row": 6,
+            "row": 5,
+            "col": 0
+          },
+          {
+            "row": 4,
             "col": 0
           }
         ],
         "width": 2,
-        "height": 1
+        "height": 3
       },
       {
-        "id": "mono",
+        "id": "t4-b",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 5
+          },
+          {
+            "row": 2,
+            "col": 6
+          },
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -14219,27 +14041,355 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 5,
-          "col": 2
+          "row": 3,
+          "col": 4
         },
         "startOrigin": {
-          "row": 5,
+          "row": 3,
           "col": 0
         },
         "solvedCells": [
           {
-            "row": 5,
-            "col": 2
+            "row": 3,
+            "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 5,
+            "row": 3,
             "col": 0
           }
         ],
         "width": 1,
         "height": 1
+      },
+      {
+        "id": "z4",
+        "thickness": 16,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 2
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 0,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 3
+          },
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 2,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "l4-c",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 2,
+          "width": 3,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 6
+          },
+          {
+            "row": 0,
+            "col": 6
+          },
+          {
+            "row": 0,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "square",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "width": 2,
+        "height": 2
       }
     ],
     "solvedBounds": {
@@ -14262,102 +14412,8 @@ export const levelBank = [
     },
     "pieces": [
       {
-        "id": "square",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 0
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 0
-          },
-          {
-            "row": 6,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 0
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 4,
-            "col": 2
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
+        "id": "t4-a",
+        "thickness": 17,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
@@ -14368,110 +14424,106 @@ export const levelBank = [
         },
         "cells": [
           [
-            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
             0
           ],
           [
             1,
             1
-          ],
-          [
-            1,
-            2
-          ],
-          [
-            0,
-            2
           ]
         ],
         "localCells": [
           {
-            "row": 1,
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
             "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 2,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 2
           },
           {
             "row": 1,
             "col": 1
           },
           {
-            "row": 1,
+            "row": 2,
             "col": 2
-          },
-          {
-            "row": 0,
-            "col": 2
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 5,
-          "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 2
-          },
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 5,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 6,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 4
-          },
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
           }
         ],
         "width": 3,
         "height": 2
       },
       {
-        "id": "i4-a",
-        "thickness": 16,
+        "id": "i3-a",
+        "thickness": 15,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
+          "maxRow": 0,
+          "maxCol": 2,
+          "width": 3,
+          "height": 1
         },
         "cells": [
           [
-            3,
-            0
+            0,
+            2
           ],
           [
-            2,
-            0
-          ],
-          [
-            1,
-            0
+            0,
+            1
           ],
           [
             0,
@@ -14480,16 +14532,12 @@ export const levelBank = [
         ],
         "localCells": [
           {
-            "row": 3,
-            "col": 0
+            "row": 0,
+            "col": 2
           },
           {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
+            "row": 0,
+            "col": 1
           },
           {
             "row": 0,
@@ -14497,145 +14545,43 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 3,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 2,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            2,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 1
+          "row": 1,
+          "col": 0
         },
         "startOrigin": {
           "row": 0,
-          "col": 1
+          "col": 4
         },
         "solvedCells": [
           {
-            "row": 5,
+            "row": 1,
             "col": 2
           },
           {
-            "row": 4,
+            "row": 1,
             "col": 1
           },
           {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 3,
-            "col": 2
+            "row": 1,
+            "col": 0
           }
         ],
         "startCells": [
           {
-            "row": 2,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 2
+            "row": 0,
+            "col": 6
           },
           {
             "row": 0,
-            "col": 2
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 4
           }
         ],
-        "width": 2,
-        "height": 3
+        "width": 3,
+        "height": 1
       },
       {
         "id": "z4",
@@ -14650,77 +14596,77 @@ export const levelBank = [
         },
         "cells": [
           [
-            2,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
             0,
             1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
           ]
         ],
         "localCells": [
           {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
             "row": 0,
             "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 3,
-          "col": 3
+          "row": 2,
+          "col": 4
         },
         "startOrigin": {
-          "row": 3,
-          "col": 4
+          "row": 1,
+          "col": 5
         },
         "solvedCells": [
           {
-            "row": 5,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 4,
-            "col": 4
+            "row": 2,
+            "col": 5
           },
           {
             "row": 3,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 4,
             "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 5,
-            "col": 4
+            "row": 1,
+            "col": 6
           },
           {
-            "row": 4,
-            "col": 4
+            "row": 2,
+            "col": 6
           },
           {
-            "row": 4,
+            "row": 2,
             "col": 5
           },
           {
@@ -14732,28 +14678,24 @@ export const levelBank = [
         "height": 3
       },
       {
-        "id": "i4-b",
-        "thickness": 16,
+        "id": "i3-b",
+        "thickness": 15,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
+          "maxRow": 0,
+          "maxCol": 2,
+          "width": 3,
+          "height": 1
         },
         "cells": [
           [
-            3,
-            0
+            0,
+            2
           ],
           [
-            2,
-            0
-          ],
-          [
-            1,
-            0
+            0,
+            1
           ],
           [
             0,
@@ -14762,16 +14704,12 @@ export const levelBank = [
         ],
         "localCells": [
           {
-            "row": 3,
-            "col": 0
+            "row": 0,
+            "col": 2
           },
           {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
+            "row": 0,
+            "col": 1
           },
           {
             "row": 0,
@@ -14779,51 +14717,137 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 0
+          "row": 2,
+          "col": 1
         },
         "startOrigin": {
-          "row": 3,
+          "row": 0,
           "col": 0
         },
         "solvedCells": [
           {
-            "row": 4,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
+            "row": 2,
+            "col": 3
           },
           {
             "row": 2,
+            "col": 2
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "width": 3,
+        "height": 1
+      },
+      {
+        "id": "l4",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
             "col": 0
           },
           {
             "row": 1,
             "col": 0
+          },
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 0
           }
         ],
-        "startCells": [
+        "solvedOrigin": {
+          "row": 2,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 0
+        },
+        "solvedCells": [
           {
-            "row": 6,
-            "col": 0
-          },
-          {
-            "row": 5,
-            "col": 0
-          },
-          {
-            "row": 4,
+            "row": 2,
             "col": 0
           },
           {
             "row": 3,
             "col": 0
+          },
+          {
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 4,
+            "col": 0
           }
         ],
-        "width": 1,
-        "height": 4
+        "startCells": [
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 3,
+            "col": 0
+          },
+          {
+            "row": 4,
+            "col": 1
+          },
+          {
+            "row": 4,
+            "col": 0
+          }
+        ],
+        "width": 2,
+        "height": 3
       },
       {
         "id": "l3-a",
@@ -14838,116 +14862,38 @@ export const levelBank = [
         },
         "cells": [
           [
-            1,
-            0
-          ],
-          [
-            0,
-            0
-          ],
-          [
             0,
             1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 2,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 3,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "i3",
-        "thickness": 15,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 0,
-          "width": 1,
-          "height": 3
-        },
-        "cells": [
+          ],
           [
-            2,
+            0,
             0
           ],
           [
             1,
             0
-          ],
-          [
-            0,
-            0
           ]
         ],
         "localCells": [
           {
-            "row": 2,
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
             "col": 0
           },
           {
             "row": 1,
             "col": 0
-          },
-          {
-            "row": 0,
-            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 3
+          "row": 3,
+          "col": 2
         },
         "startOrigin": {
-          "row": 0,
+          "row": 3,
           "col": 3
         },
         "solvedCells": [
@@ -14956,173 +14902,33 @@ export const levelBank = [
             "col": 3
           },
           {
-            "row": 2,
-            "col": 3
+            "row": 3,
+            "col": 2
           },
           {
-            "row": 1,
-            "col": 3
+            "row": 4,
+            "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 3
-          }
-        ],
-        "width": 1,
-        "height": 3
-      },
-      {
-        "id": "l3-b",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 2,
+            "row": 3,
             "col": 4
           },
           {
-            "row": 2,
-            "col": 5
+            "row": 3,
+            "col": 3
           },
           {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
+            "row": 4,
+            "col": 3
           }
         ],
         "width": 2,
         "height": 2
       },
       {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 0,
-            "col": 6
-          }
-        ],
-        "width": 2,
-        "height": 1
-      },
-      {
-        "id": "mono",
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -15145,23 +14951,397 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 4
+          "row": 3,
+          "col": 1
         },
         "startOrigin": {
-          "row": 1,
-          "col": 6
+          "row": 6,
+          "col": 0
         },
         "solvedCells": [
           {
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 0
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "l3-b",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
             "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 3,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 5
+          },
+          {
+            "row": 5,
+            "col": 5
+          },
+          {
+            "row": 5,
             "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 1,
+            "row": 3,
             "col": 6
+          },
+          {
+            "row": 4,
+            "col": 6
+          },
+          {
+            "row": 4,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "t4-b",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 4,
+          "col": 3
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 5,
+            "col": 3
+          },
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 4,
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 4
+          },
+          {
+            "row": 5,
+            "col": 3
+          },
+          {
+            "row": 6,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "square",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 5,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 5,
+            "col": 0
+          },
+          {
+            "row": 6,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "domino",
+        "thickness": 14,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 1,
+          "width": 2,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 6,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 6,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 6,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 6
+          },
+          {
+            "row": 6,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 1
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 6,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 5,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 6,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 5,
+            "col": 0
           }
         ],
         "width": 1,
@@ -15188,102 +15368,8 @@ export const levelBank = [
     },
     "pieces": [
       {
-        "id": "square",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 6
-          },
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 4
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
+        "id": "t4-a",
+        "thickness": 17,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
@@ -15294,97 +15380,97 @@ export const levelBank = [
         },
         "cells": [
           [
-            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
             2
           ],
           [
             0,
             1
-          ],
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
           ]
         ],
         "localCells": [
           {
-            "row": 0,
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
             "col": 2
           },
           {
             "row": 0,
             "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 0,
-          "col": 2
+          "row": 4,
+          "col": 1
         },
         "startOrigin": {
-          "row": 0,
-          "col": 1
+          "row": 4,
+          "col": 3
         },
         "solvedCells": [
           {
-            "row": 0,
-            "col": 4
+            "row": 5,
+            "col": 1
           },
           {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
+            "row": 5,
             "col": 2
           },
           {
-            "row": 1,
+            "row": 5,
+            "col": 3
+          },
+          {
+            "row": 4,
             "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 0,
+            "row": 5,
             "col": 3
           },
           {
-            "row": 0,
-            "col": 2
+            "row": 5,
+            "col": 4
           },
           {
-            "row": 0,
-            "col": 1
+            "row": 5,
+            "col": 5
           },
           {
-            "row": 1,
-            "col": 1
+            "row": 4,
+            "col": 4
           }
         ],
         "width": 3,
         "height": 2
       },
       {
-        "id": "i4-a",
-        "thickness": 16,
+        "id": "i3-a",
+        "thickness": 15,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
+          "maxRow": 0,
+          "maxCol": 2,
+          "width": 3,
+          "height": 1
         },
         "cells": [
           [
@@ -15392,16 +15478,12 @@ export const levelBank = [
             0
           ],
           [
-            1,
-            0
+            0,
+            1
           ],
           [
-            2,
-            0
-          ],
-          [
-            3,
-            0
+            0,
+            2
           ]
         ],
         "localCells": [
@@ -15410,141 +15492,25 @@ export const levelBank = [
             "col": 0
           },
           {
-            "row": 1,
-            "col": 0
+            "row": 0,
+            "col": 1
           },
           {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
+            "row": 0,
+            "col": 2
           }
         ],
         "solvedOrigin": {
-          "row": 0,
-          "col": 1
+          "row": 5,
+          "col": 4
         },
         "startOrigin": {
-          "row": 1,
+          "row": 6,
           "col": 0
         },
         "solvedCells": [
           {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 3,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          },
-          {
-            "row": 4,
-            "col": 0
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 1,
-            "col": 4
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 4
-          },
-          {
-            "row": 3,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
+            "row": 5,
             "col": 4
           },
           {
@@ -15553,15 +15519,25 @@ export const levelBank = [
           },
           {
             "row": 5,
-            "col": 4
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 0
           },
           {
             "row": 6,
-            "col": 4
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 2
           }
         ],
-        "width": 2,
-        "height": 3
+        "width": 3,
+        "height": 1
       },
       {
         "id": "z4",
@@ -15576,77 +15552,77 @@ export const levelBank = [
         },
         "cells": [
           [
-            0,
-            1
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
             2,
             0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
           ]
         ],
         "localCells": [
           {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
             "row": 2,
             "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 2
+          "row": 2,
+          "col": 1
         },
         "startOrigin": {
-          "row": 1,
-          "col": 1
+          "row": 3,
+          "col": 0
         },
         "solvedCells": [
           {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 2
+            "row": 4,
+            "col": 1
           },
           {
             "row": 3,
+            "col": 1
+          },
+          {
+            "row": 3,
+            "col": 2
+          },
+          {
+            "row": 2,
             "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 1,
-            "col": 2
+            "row": 5,
+            "col": 0
           },
           {
-            "row": 2,
-            "col": 2
+            "row": 4,
+            "col": 0
           },
           {
-            "row": 2,
+            "row": 4,
             "col": 1
           },
           {
@@ -15658,15 +15634,15 @@ export const levelBank = [
         "height": 3
       },
       {
-        "id": "i4-b",
-        "thickness": 16,
+        "id": "i3-b",
+        "thickness": 15,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
+          "maxRow": 0,
+          "maxCol": 2,
+          "width": 3,
+          "height": 1
         },
         "cells": [
           [
@@ -15674,16 +15650,12 @@ export const levelBank = [
             0
           ],
           [
-            1,
-            0
+            0,
+            1
           ],
           [
-            2,
-            0
-          ],
-          [
-            3,
-            0
+            0,
+            2
           ]
         ],
         "localCells": [
@@ -15692,64 +15664,146 @@ export const levelBank = [
             "col": 0
           },
           {
-            "row": 1,
-            "col": 0
+            "row": 0,
+            "col": 1
           },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 6,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 4,
+            "col": 4
+          },
+          {
+            "row": 4,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 4
+          },
+          {
+            "row": 6,
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 6
+          }
+        ],
+        "width": 3,
+        "height": 1
+      },
+      {
+        "id": "l4",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
           {
             "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
             "col": 0
           },
           {
-            "row": 3,
-            "col": 0
+            "row": 0,
+            "col": 1
           }
         ],
         "solvedOrigin": {
           "row": 2,
-          "col": 6
+          "col": 5
         },
         "startOrigin": {
-          "row": 0,
-          "col": 6
+          "row": 2,
+          "col": 5
         },
         "solvedCells": [
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
           {
             "row": 4,
             "col": 6
           },
           {
-            "row": 5,
+            "row": 3,
+            "col": 6
+          },
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 2,
             "col": 6
           }
         ],
         "startCells": [
           {
-            "row": 0,
-            "col": 6
-          },
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 2,
+            "row": 4,
             "col": 6
           },
           {
             "row": 3,
             "col": 6
+          },
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 2,
+            "col": 6
           }
         ],
-        "width": 1,
-        "height": 4
+        "width": 2,
+        "height": 3
       },
       {
         "id": "l3-a",
@@ -15764,291 +15818,73 @@ export const levelBank = [
         },
         "cells": [
           [
-            0,
-            1
-          ],
-          [
-            1,
-            1
-          ],
-          [
             1,
             0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
           ]
         ],
         "localCells": [
           {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
             "row": 1,
             "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
           }
         ],
         "solvedOrigin": {
-          "row": 3,
-          "col": 4
+          "row": 2,
+          "col": 3
         },
         "startOrigin": {
-          "row": 5,
-          "col": 5
+          "row": 2,
+          "col": 2
         },
         "solvedCells": [
           {
             "row": 3,
-            "col": 5
+            "col": 3
           },
           {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 4,
+            "row": 3,
             "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 6
-          },
-          {
-            "row": 6,
-            "col": 5
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "i3",
-        "thickness": 15,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 0,
-          "width": 1,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
           },
           {
             "row": 2,
-            "col": 0
+            "col": 4
           }
         ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 3
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 3
-        },
-        "solvedCells": [
+        "startCells": [
+          {
+            "row": 3,
+            "col": 2
+          },
           {
             "row": 3,
             "col": 3
           },
           {
-            "row": 4,
+            "row": 2,
             "col": 3
-          },
-          {
-            "row": 5,
-            "col": 3
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 5,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 3
-          }
-        ],
-        "width": 1,
-        "height": 3
-      },
-      {
-        "id": "l3-b",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 4,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 2
-          },
-          {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 1
           }
         ],
         "width": 2,
         "height": 2
       },
       {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 0,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 6,
-          "col": 0
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 6,
-            "col": 1
-          },
-          {
-            "row": 6,
-            "col": 0
-          }
-        ],
-        "width": 2,
-        "height": 1
-      },
-      {
-        "id": "mono",
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -16071,23 +15907,397 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 5,
-          "col": 2
+          "row": 3,
+          "col": 5
         },
         "startOrigin": {
-          "row": 5,
+          "row": 0,
+          "col": 6
+        },
+        "solvedCells": [
+          {
+            "row": 3,
+            "col": 5
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 6
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "l3-b",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 2,
           "col": 0
         },
         "solvedCells": [
           {
-            "row": 5,
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
             "col": 2
           }
         ],
         "startCells": [
           {
-            "row": 5,
+            "row": 3,
             "col": 0
+          },
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "t4-b",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 3
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 2
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "square",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 5
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 6
+          },
+          {
+            "row": 0,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 6
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 4
+          },
+          {
+            "row": 0,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "domino",
+        "thickness": 14,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 1,
+          "width": 2,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 1
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 6
+        },
+        "solvedCells": [
+          {
+            "row": 0,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 6
           }
         ],
         "width": 1,
@@ -16114,102 +16324,8 @@ export const levelBank = [
     },
     "pieces": [
       {
-        "id": "square",
-        "thickness": 18,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 0
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 1
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 2
-          },
-          {
-            "row": 2,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 2
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "l4",
-        "thickness": 18,
+        "id": "t4-a",
+        "thickness": 17,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
@@ -16220,231 +16336,43 @@ export const levelBank = [
         },
         "cells": [
           [
-            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
             0
           ],
           [
             0,
             1
-          ],
-          [
-            0,
-            2
-          ],
-          [
-            1,
-            2
           ]
         ],
         "localCells": [
           {
-            "row": 0,
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
             "col": 0
           },
           {
             "row": 0,
             "col": 1
-          },
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 1,
-            "col": 2
           }
         ],
         "solvedOrigin": {
-          "row": 0,
-          "col": 2
-        },
-        "startOrigin": {
-          "row": 0,
+          "row": 4,
           "col": 3
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 2
-          },
-          {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 4
-          },
-          {
-            "row": 1,
-            "col": 4
-          }
-        ],
-        "startCells": [
-          {
-            "row": 0,
-            "col": 3
-          },
-          {
-            "row": 0,
-            "col": 4
-          },
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          }
-        ],
-        "width": 3,
-        "height": 2
-      },
-      {
-        "id": "i4-a",
-        "thickness": 16,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ],
-          [
-            3,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          }
-        ],
-        "solvedOrigin": {
-          "row": 0,
-          "col": 5
-        },
-        "startOrigin": {
-          "row": 1,
-          "col": 6
-        },
-        "solvedCells": [
-          {
-            "row": 0,
-            "col": 5
-          },
-          {
-            "row": 1,
-            "col": 5
-          },
-          {
-            "row": 2,
-            "col": 5
-          },
-          {
-            "row": 3,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 1,
-            "col": 6
-          },
-          {
-            "row": 2,
-            "col": 6
-          },
-          {
-            "row": 3,
-            "col": 6
-          },
-          {
-            "row": 4,
-            "col": 6
-          }
-        ],
-        "width": 1,
-        "height": 4
-      },
-      {
-        "id": "t4",
-        "thickness": 17,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 1,
-          "width": 2,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
-            2,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
-            "row": 2,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 1,
-          "col": 1
         },
         "startOrigin": {
           "row": 4,
@@ -16452,25 +16380,93 @@ export const levelBank = [
         },
         "solvedCells": [
           {
-            "row": 1,
-            "col": 2
+            "row": 5,
+            "col": 5
           },
           {
-            "row": 2,
-            "col": 1
+            "row": 5,
+            "col": 4
           },
           {
-            "row": 2,
-            "col": 2
+            "row": 5,
+            "col": 3
           },
           {
-            "row": 3,
-            "col": 2
+            "row": 4,
+            "col": 4
           }
         ],
         "startCells": [
           {
+            "row": 5,
+            "col": 3
+          },
+          {
+            "row": 5,
+            "col": 2
+          },
+          {
+            "row": 5,
+            "col": 1
+          },
+          {
             "row": 4,
+            "col": 2
+          }
+        ],
+        "width": 3,
+        "height": 2
+      },
+      {
+        "id": "i3-a",
+        "thickness": 15,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 2,
+          "width": 3,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 5,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 6,
+          "col": 4
+        },
+        "solvedCells": [
+          {
+            "row": 5,
             "col": 2
           },
           {
@@ -16479,15 +16475,25 @@ export const levelBank = [
           },
           {
             "row": 5,
-            "col": 2
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 6
           },
           {
             "row": 6,
-            "col": 2
+            "col": 5
+          },
+          {
+            "row": 6,
+            "col": 4
           }
         ],
-        "width": 2,
-        "height": 3
+        "width": 3,
+        "height": 1
       },
       {
         "id": "z4",
@@ -16502,77 +16508,77 @@ export const levelBank = [
         },
         "cells": [
           [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            1,
-            1
-          ],
-          [
             2,
             1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
           ]
         ],
         "localCells": [
           {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 1
-          },
-          {
             "row": 2,
             "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 1,
-          "col": 3
+          "row": 2,
+          "col": 4
         },
         "startOrigin": {
-          "row": 1,
-          "col": 4
+          "row": 3,
+          "col": 5
         },
         "solvedCells": [
           {
-            "row": 1,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 3
-          },
-          {
-            "row": 2,
-            "col": 4
+            "row": 4,
+            "col": 5
           },
           {
             "row": 3,
+            "col": 5
+          },
+          {
+            "row": 3,
+            "col": 4
+          },
+          {
+            "row": 2,
             "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 1,
-            "col": 4
+            "row": 5,
+            "col": 6
           },
           {
-            "row": 2,
-            "col": 4
+            "row": 4,
+            "col": 6
           },
           {
-            "row": 2,
+            "row": 4,
             "col": 5
           },
           {
@@ -16584,19 +16590,97 @@ export const levelBank = [
         "height": 3
       },
       {
-        "id": "i4-b",
-        "thickness": 16,
+        "id": "i3-b",
+        "thickness": 15,
         "bounds": {
           "minRow": 0,
           "minCol": 0,
-          "maxRow": 3,
-          "maxCol": 0,
-          "width": 1,
-          "height": 4
+          "maxRow": 0,
+          "maxCol": 2,
+          "width": 3,
+          "height": 1
         },
         "cells": [
           [
             0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 4,
+          "col": 1
+        },
+        "startOrigin": {
+          "row": 6,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 4,
+            "col": 3
+          },
+          {
+            "row": 4,
+            "col": 2
+          },
+          {
+            "row": 4,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 6,
+            "col": 2
+          },
+          {
+            "row": 6,
+            "col": 1
+          },
+          {
+            "row": 6,
+            "col": 0
+          }
+        ],
+        "width": 3,
+        "height": 1
+      },
+      {
+        "id": "l4",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
             0
           ],
           [
@@ -16604,17 +16688,17 @@ export const levelBank = [
             0
           ],
           [
-            2,
-            0
+            0,
+            1
           ],
           [
-            3,
+            0,
             0
           ]
         ],
         "localCells": [
           {
-            "row": 0,
+            "row": 2,
             "col": 0
           },
           {
@@ -16622,11 +16706,11 @@ export const levelBank = [
             "col": 0
           },
           {
-            "row": 2,
-            "col": 0
+            "row": 0,
+            "col": 1
           },
           {
-            "row": 3,
+            "row": 0,
             "col": 0
           }
         ],
@@ -16635,47 +16719,47 @@ export const levelBank = [
           "col": 0
         },
         "startOrigin": {
-          "row": 0,
+          "row": 2,
           "col": 0
         },
         "solvedCells": [
-          {
-            "row": 2,
-            "col": 0
-          },
-          {
-            "row": 3,
-            "col": 0
-          },
           {
             "row": 4,
             "col": 0
           },
           {
-            "row": 5,
+            "row": 3,
+            "col": 0
+          },
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 2,
             "col": 0
           }
         ],
         "startCells": [
           {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
-            "row": 2,
+            "row": 4,
             "col": 0
           },
           {
             "row": 3,
             "col": 0
+          },
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 2,
+            "col": 0
           }
         ],
-        "width": 1,
-        "height": 4
+        "width": 2,
+        "height": 3
       },
       {
         "id": "l3-a",
@@ -16690,291 +16774,73 @@ export const levelBank = [
         },
         "cells": [
           [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
             1,
             1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
           ]
         ],
         "localCells": [
           {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
-          },
-          {
             "row": 1,
             "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 0
           }
         ],
         "solvedOrigin": {
-          "row": 3,
-          "col": 1
+          "row": 2,
+          "col": 2
         },
         "startOrigin": {
-          "row": 5,
-          "col": 0
+          "row": 2,
+          "col": 3
         },
         "solvedCells": [
           {
             "row": 3,
-            "col": 1
+            "col": 3
           },
           {
-            "row": 4,
-            "col": 1
-          },
-          {
-            "row": 4,
+            "row": 3,
             "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 5,
-            "col": 0
-          },
-          {
-            "row": 6,
-            "col": 0
-          },
-          {
-            "row": 6,
-            "col": 1
-          }
-        ],
-        "width": 2,
-        "height": 2
-      },
-      {
-        "id": "i3",
-        "thickness": 15,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 2,
-          "maxCol": 0,
-          "width": 1,
-          "height": 3
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            1,
-            0
-          ],
-          [
-            2,
-            0
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 1,
-            "col": 0
           },
           {
             "row": 2,
-            "col": 0
+            "col": 2
           }
         ],
-        "solvedOrigin": {
-          "row": 3,
-          "col": 3
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 3
-        },
-        "solvedCells": [
+        "startCells": [
+          {
+            "row": 3,
+            "col": 4
+          },
           {
             "row": 3,
             "col": 3
           },
           {
-            "row": 4,
+            "row": 2,
             "col": 3
-          },
-          {
-            "row": 5,
-            "col": 3
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 3
-          },
-          {
-            "row": 5,
-            "col": 3
-          },
-          {
-            "row": 6,
-            "col": 3
-          }
-        ],
-        "width": 1,
-        "height": 3
-      },
-      {
-        "id": "l3-b",
-        "thickness": 20,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 1,
-          "maxCol": 1,
-          "width": 2,
-          "height": 2
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          },
-          {
-            "row": 1,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "startOrigin": {
-          "row": 4,
-          "col": 4
-        },
-        "solvedCells": [
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
-          }
-        ],
-        "startCells": [
-          {
-            "row": 4,
-            "col": 4
-          },
-          {
-            "row": 4,
-            "col": 5
-          },
-          {
-            "row": 5,
-            "col": 5
           }
         ],
         "width": 2,
         "height": 2
       },
       {
-        "id": "domino",
-        "thickness": 14,
-        "bounds": {
-          "minRow": 0,
-          "minCol": 0,
-          "maxRow": 0,
-          "maxCol": 1,
-          "width": 2,
-          "height": 1
-        },
-        "cells": [
-          [
-            0,
-            0
-          ],
-          [
-            0,
-            1
-          ]
-        ],
-        "localCells": [
-          {
-            "row": 0,
-            "col": 0
-          },
-          {
-            "row": 0,
-            "col": 1
-          }
-        ],
-        "solvedOrigin": {
-          "row": 5,
-          "col": 1
-        },
-        "startOrigin": {
-          "row": 6,
-          "col": 5
-        },
-        "solvedCells": [
-          {
-            "row": 5,
-            "col": 1
-          },
-          {
-            "row": 5,
-            "col": 2
-          }
-        ],
-        "startCells": [
-          {
-            "row": 6,
-            "col": 5
-          },
-          {
-            "row": 6,
-            "col": 6
-          }
-        ],
-        "width": 2,
-        "height": 1
-      },
-      {
-        "id": "mono",
+        "id": "mono-a",
         "thickness": 12,
         "bounds": {
           "minRow": 0,
@@ -16997,23 +16863,397 @@ export const levelBank = [
           }
         ],
         "solvedOrigin": {
-          "row": 5,
-          "col": 4
+          "row": 3,
+          "col": 1
         },
         "startOrigin": {
-          "row": 5,
-          "col": 6
+          "row": 0,
+          "col": 0
         },
         "solvedCells": [
           {
-            "row": 5,
+            "row": 3,
+            "col": 1
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "width": 1,
+        "height": 1
+      },
+      {
+        "id": "l3-b",
+        "thickness": 20,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 1,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 2,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 5
+          },
+          {
+            "row": 1,
+            "col": 5
+          },
+          {
+            "row": 1,
             "col": 4
           }
         ],
         "startCells": [
           {
-            "row": 5,
+            "row": 3,
             "col": 6
+          },
+          {
+            "row": 2,
+            "col": 6
+          },
+          {
+            "row": 2,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "t4-b",
+        "thickness": 17,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 2,
+          "maxCol": 1,
+          "width": 2,
+          "height": 3
+        },
+        "cells": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 2,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 3
+        },
+        "solvedCells": [
+          {
+            "row": 2,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 3
+          }
+        ],
+        "startCells": [
+          {
+            "row": 2,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 4
+          },
+          {
+            "row": 1,
+            "col": 3
+          },
+          {
+            "row": 0,
+            "col": 4
+          }
+        ],
+        "width": 2,
+        "height": 3
+      },
+      {
+        "id": "square",
+        "thickness": 18,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 1,
+          "maxCol": 1,
+          "width": 2,
+          "height": 2
+        },
+        "cells": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 0
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 1
+        },
+        "solvedCells": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 0
+          },
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 2
+          },
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 2
+          },
+          {
+            "row": 0,
+            "col": 1
+          }
+        ],
+        "width": 2,
+        "height": 2
+      },
+      {
+        "id": "domino",
+        "thickness": 14,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 1,
+          "width": 2,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 1
+          },
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 4
+        },
+        "startOrigin": {
+          "row": 0,
+          "col": 5
+        },
+        "solvedCells": [
+          {
+            "row": 0,
+            "col": 5
+          },
+          {
+            "row": 0,
+            "col": 4
+          }
+        ],
+        "startCells": [
+          {
+            "row": 0,
+            "col": 6
+          },
+          {
+            "row": 0,
+            "col": 5
+          }
+        ],
+        "width": 2,
+        "height": 1
+      },
+      {
+        "id": "mono-b",
+        "thickness": 12,
+        "bounds": {
+          "minRow": 0,
+          "minCol": 0,
+          "maxRow": 0,
+          "maxCol": 0,
+          "width": 1,
+          "height": 1
+        },
+        "cells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "localCells": [
+          {
+            "row": 0,
+            "col": 0
+          }
+        ],
+        "solvedOrigin": {
+          "row": 0,
+          "col": 2
+        },
+        "startOrigin": {
+          "row": 1,
+          "col": 0
+        },
+        "solvedCells": [
+          {
+            "row": 0,
+            "col": 2
+          }
+        ],
+        "startCells": [
+          {
+            "row": 1,
+            "col": 0
           }
         ],
         "width": 1,
