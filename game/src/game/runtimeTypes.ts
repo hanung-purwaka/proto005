@@ -5,8 +5,6 @@ export interface AxisRange {
   max: number;
 }
 
-export type DragAxis = 'horizontal' | 'vertical';
-
 export interface PieceState {
   data: CompiledPieceData;
   row: number;
@@ -22,8 +20,8 @@ export interface DragState {
   startCol: number;
   horizontalRange: AxisRange;
   verticalRange: AxisRange;
-  previewDelta: number;
-  axis?: DragAxis;
+  previewRowDelta: number;
+  previewColDelta: number;
 }
 
 export interface BoardMetrics {

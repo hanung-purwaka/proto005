@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
 import type { CompiledLevelData, CompiledPieceData } from '@shared/puzzle';
-import type { DragAxis } from './runtimeTypes';
 
 export const PIECE_FACE_RADIUS = 16;
 export const PIECE_FACE_INSET = 1;
@@ -111,9 +110,9 @@ export class PieceView {
     this.container.setPosition(centerX, centerY);
   }
 
-  setPreviewPosition(baseX: number, baseY: number, axis: DragAxis | undefined, deltaCells: number): void {
-    const x = axis === 'horizontal' ? baseX + deltaCells * this.cellSize : baseX;
-    const y = axis === 'vertical' ? baseY + deltaCells * this.cellSize : baseY;
+  setPreviewPosition(baseX: number, baseY: number, rowDeltaCells: number, colDeltaCells: number): void {
+    const x = baseX + colDeltaCells * this.cellSize;
+    const y = baseY + rowDeltaCells * this.cellSize;
     this.setGridPosition(x, y);
   }
 

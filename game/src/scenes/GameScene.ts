@@ -12,7 +12,7 @@ import {
 import { PIECE_FACE_INSET, PIECE_FACE_RADIUS, PieceView } from '@game/game/pieceView';
 import { PuzzleBoard } from '@game/game/puzzleBoard';
 import { UI_TEXTURE_KEYS, UI_TEXTURE_SIZES } from '@game/game/uiAssets';
-import type { BoardMetrics, DragAxis, DragState, LevelSession } from '@game/game/runtimeTypes';
+import type { BoardMetrics, DragState, LevelSession } from '@game/game/runtimeTypes';
 import type { CompiledLevelData } from '@shared/puzzle';
 
 type SceneInitData = { levelId?: string };
@@ -27,6 +27,10 @@ type RevealCell = {
 };
 
 export class GameScene extends Phaser.Scene {
+  private static readonly DRAG_COLLISION_EPSILON = 0.0001;
+  private static readonly DRAG_COLLISION_STEPS = 12;
+  private static readonly DRAG_COLLISION_INSET = 0.08;
+
   private board!: PuzzleBoard;
   private boardMetrics!: BoardMetrics;
   private session!: LevelSession;
@@ -236,7 +240,8 @@ export class GameScene extends Phaser.Scene {
         startCol: piece.col,
         horizontalRange: ranges.horizontal,
         verticalRange: ranges.vertical,
-        previewDelta: 0,
+        previewRowDelta: 0,
+        previewColDelta: 0,
       };
 
       view.setDragging(true);
@@ -250,26 +255,17 @@ export class GameScene extends Phaser.Scene {
       const dx = pointer.x - this.dragState.startPointerX;
       const dy = pointer.y - this.dragState.startPointerY;
 
-      if (!this.dragState.axis) {
-        const canMoveHorizontal =
-          this.dragState.horizontalRange.min !== 0 || this.dragState.horizontalRange.max !== 0;
-        const canMoveVertical =
-          this.dragState.verticalRange.min !== 0 || this.dragState.verticalRange.max !== 0;
-
-        if (Math.max(Math.abs(dx), Math.abs(dy)) < DRAG_LOCK_THRESHOLD) {
-          return;
-        }
-
-        if (canMoveHorizontal && !canMoveVertical) {
-          this.dragState.axis = 'horizontal';
-        } else if (!canMoveHorizontal && canMoveVertical) {
-          this.dragState.axis = 'vertical';
-        } else {
-          this.dragState.axis = Math.abs(dx) >= Math.abs(dy) ? 'horizontal' : 'vertical';
-        }
+      if (
+        Math.max(Math.abs(dx), Math.abs(dy)) < DRAG_LOCK_THRESHOLD &&
+        this.dragState.previewRowDelta === 0 &&
+        this.dragState.previewColDelta === 0
+      ) {
+        return;
       }
 
-      this.dragState.previewDelta = this.clampPreviewDelta(this.dragState.axis, dx, dy, this.dragState);
+      const previewOffset = this.getPreviewOffset(dx, dy, this.dragState);
+      this.dragState.previewRowDelta = previewOffset.rowDelta;
+      this.dragState.previewColDelta = previewOffset.colDelta;
       this.updateDraggedView();
     });
 
@@ -282,10 +278,153 @@ export class GameScene extends Phaser.Scene {
     });
   }
 
-  private clampPreviewDelta(axis: DragAxis, dx: number, dy: number, dragState: DragState): number {
-    const raw = axis === 'horizontal' ? dx / this.boardMetrics.cellSize : dy / this.boardMetrics.cellSize;
-    const range = axis === 'horizontal' ? dragState.horizontalRange : dragState.verticalRange;
-    return Phaser.Math.Clamp(raw, range.min, range.max);
+  private getPreviewOffset(
+    dx: number,
+    dy: number,
+    dragState: DragState,
+  ): { rowDelta: number; colDelta: number } {
+    const rawOffset = {
+      rowDelta: Phaser.Math.Clamp(
+        dy / this.boardMetrics.cellSize,
+        dragState.verticalRange.min,
+        dragState.verticalRange.max,
+      ),
+      colDelta: Phaser.Math.Clamp(
+        dx / this.boardMetrics.cellSize,
+        dragState.horizontalRange.min,
+        dragState.horizontalRange.max,
+      ),
+    };
+
+    return this.resolvePreviewCollision(rawOffset.rowDelta, rawOffset.colDelta, dragState);
+  }
+
+  private findClosestSnapOffset(
+    rawRowDelta: number,
+    rawColDelta: number,
+    dragState: DragState,
+  ): { rowDelta: number; colDelta: number } {
+    const piece = this.board.getPiece(dragState.pieceId);
+    let bestRowDelta = 0;
+    let bestColDelta = 0;
+    let bestDistance = Number.POSITIVE_INFINITY;
+
+    for (let rowDelta = dragState.verticalRange.min; rowDelta <= dragState.verticalRange.max; rowDelta += 1) {
+      for (let colDelta = dragState.horizontalRange.min; colDelta <= dragState.horizontalRange.max; colDelta += 1) {
+        const nextRow = dragState.startRow + rowDelta;
+        const nextCol = dragState.startCol + colDelta;
+
+        if (!this.board.canPlacePiece(piece.data, nextRow, nextCol, dragState.pieceId)) {
+          continue;
+        }
+
+        const distance =
+          (rowDelta - rawRowDelta) * (rowDelta - rawRowDelta) +
+          (colDelta - rawColDelta) * (colDelta - rawColDelta);
+        const isCloserToOrigin =
+          Math.abs(rowDelta) + Math.abs(colDelta) < Math.abs(bestRowDelta) + Math.abs(bestColDelta);
+
+        if (
+          distance < bestDistance ||
+          (distance === bestDistance && isCloserToOrigin)
+        ) {
+          bestDistance = distance;
+          bestRowDelta = rowDelta;
+          bestColDelta = colDelta;
+        }
+      }
+    }
+
+    return {
+      rowDelta: bestRowDelta,
+      colDelta: bestColDelta,
+    };
+  }
+
+  private resolvePreviewCollision(
+    targetRowDelta: number,
+    targetColDelta: number,
+    dragState: DragState,
+  ): { rowDelta: number; colDelta: number } {
+    if (this.canOccupyPreviewOffset(dragState, targetRowDelta, targetColDelta)) {
+      return {
+        rowDelta: targetRowDelta,
+        colDelta: targetColDelta,
+      };
+    }
+
+    const startRowDelta = dragState.previewRowDelta;
+    const startColDelta = dragState.previewColDelta;
+    let bestRowDelta = startRowDelta;
+    let bestColDelta = startColDelta;
+    let low = 0;
+    let high = 1;
+
+    for (let step = 0; step < GameScene.DRAG_COLLISION_STEPS; step += 1) {
+      const mid = (low + high) / 2;
+      const candidateRowDelta = Phaser.Math.Linear(startRowDelta, targetRowDelta, mid);
+      const candidateColDelta = Phaser.Math.Linear(startColDelta, targetColDelta, mid);
+
+      if (this.canOccupyPreviewOffset(dragState, candidateRowDelta, candidateColDelta)) {
+        low = mid;
+        bestRowDelta = candidateRowDelta;
+        bestColDelta = candidateColDelta;
+      } else {
+        high = mid;
+      }
+    }
+
+    return {
+      rowDelta: bestRowDelta,
+      colDelta: bestColDelta,
+    };
+  }
+
+  private canOccupyPreviewOffset(
+    dragState: DragState,
+    rowDelta: number,
+    colDelta: number,
+  ): boolean {
+    const epsilon = GameScene.DRAG_COLLISION_EPSILON;
+    const inset = GameScene.DRAG_COLLISION_INSET;
+    const activePiece = this.board.getPiece(dragState.pieceId);
+    const boardRows = this.session.level.grid.rows;
+    const boardCols = this.session.level.grid.cols;
+
+    for (const cell of activePiece.data.localCells) {
+      const top = dragState.startRow + cell.row + rowDelta + inset;
+      const left = dragState.startCol + cell.col + colDelta + inset;
+      const bottom = dragState.startRow + cell.row + rowDelta + 1 - inset;
+      const right = dragState.startCol + cell.col + colDelta + 1 - inset;
+
+      if (top < -epsilon || left < -epsilon || bottom > boardRows + epsilon || right > boardCols + epsilon) {
+        return false;
+      }
+
+      for (const piece of this.board.getPieces()) {
+        if (piece.data.id === dragState.pieceId) {
+          continue;
+        }
+
+        for (const occupiedCell of piece.data.localCells) {
+          const occupiedTop = piece.row + occupiedCell.row;
+          const occupiedLeft = piece.col + occupiedCell.col;
+          const occupiedBottom = occupiedTop + 1;
+          const occupiedRight = occupiedLeft + 1;
+
+          if (
+            top < occupiedBottom - epsilon &&
+            bottom > occupiedTop + epsilon &&
+            left < occupiedRight - epsilon &&
+            right > occupiedLeft + epsilon
+          ) {
+            return false;
+          }
+        }
+      }
+    }
+
+    return true;
   }
 
   private updateDraggedView(): void {
@@ -303,8 +442,8 @@ export class GameScene extends Phaser.Scene {
     view.setPreviewPosition(
       this.boardMetrics.originX + piece.col * this.boardMetrics.cellSize,
       this.boardMetrics.originY + piece.row * this.boardMetrics.cellSize,
-      this.dragState.axis,
-      this.dragState.previewDelta,
+      this.dragState.previewRowDelta,
+      this.dragState.previewColDelta,
     );
   }
 
@@ -324,23 +463,13 @@ export class GameScene extends Phaser.Scene {
 
     view.setDragging(false);
 
-    if (!dragState.axis) {
-      view.tweenTo(
-        this.boardMetrics.originX + piece.col * this.boardMetrics.cellSize,
-        this.boardMetrics.originY + piece.row * this.boardMetrics.cellSize,
-        SNAP_TWEEN_MS,
-      );
-      return;
-    }
-
-    const snappedDelta = Phaser.Math.Clamp(
-      Math.round(dragState.previewDelta),
-      dragState.axis === 'horizontal' ? dragState.horizontalRange.min : dragState.verticalRange.min,
-      dragState.axis === 'horizontal' ? dragState.horizontalRange.max : dragState.verticalRange.max,
+    const snappedOffset = this.findClosestSnapOffset(
+      dragState.previewRowDelta,
+      dragState.previewColDelta,
+      dragState,
     );
-
-    const nextRow = dragState.axis === 'vertical' ? dragState.startRow + snappedDelta : dragState.startRow;
-    const nextCol = dragState.axis === 'horizontal' ? dragState.startCol + snappedDelta : dragState.startCol;
+    const nextRow = dragState.startRow + snappedOffset.rowDelta;
+    const nextCol = dragState.startCol + snappedOffset.colDelta;
     const moved = nextRow !== dragState.startRow || nextCol !== dragState.startCol;
 
     this.board.movePiece(dragState.pieceId, nextRow, nextCol);
