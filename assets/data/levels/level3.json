@@ -1,6 +1,6 @@
 {
   "id": "level3",
-  "image": "level3",
+  "image": "level2",
   "grid": {
     "rows": 7,
     "cols": 7
@@ -14,74 +14,45 @@
         [1, 0],
         [1, 1]
       ],
-      "solvedOrigin": [0, 1],
-      "startOrigin": [1, 0],
+      "solvedOrigin": [0, 0],
+      "startOrigin": [1, 1],
       "thickness": 18
     },
     {
-      "id": "l4-a",
+      "id": "l4",
       "cells": [
+        [0, 0],
         [0, 1],
-        [1, 1],
-        [2, 0],
-        [2, 1]
+        [0, 2],
+        [1, 2]
       ],
       "solvedOrigin": [0, 2],
-      "startOrigin": [0, 2],
+      "startOrigin": [0, 3],
       "thickness": 18
     },
     {
-      "id": "i3",
+      "id": "i4-a",
       "cells": [
         [0, 0],
         [1, 0],
-        [2, 0]
-      ],
-      "solvedOrigin": [0, 4],
-      "startOrigin": [1, 4],
-      "thickness": 15
-    },
-    {
-      "id": "l4-b",
-      "cells": [
-        [0, 0],
-        [0, 1],
-        [1, 0],
-        [2, 0]
+        [2, 0],
+        [3, 0]
       ],
       "solvedOrigin": [0, 5],
-      "startOrigin": [0, 5],
-      "thickness": 18
+      "startOrigin": [1, 6],
+      "thickness": 16
     },
     {
-      "id": "mono-a",
-      "cells": [
-        [0, 0]
-      ],
-      "solvedOrigin": [1, 6],
-      "startOrigin": [3, 6],
-      "thickness": 12
-    },
-    {
-      "id": "domino",
-      "cells": [
-        [0, 0],
-        [1, 0]
-      ],
-      "solvedOrigin": [2, 1],
-      "startOrigin": [3, 0],
-      "thickness": 14
-    },
-    {
-      "id": "l3-a",
+      "id": "t4",
       "cells": [
         [0, 1],
         [1, 0],
-        [1, 1]
+        [1, 1],
+        [2, 1]
       ],
-      "solvedOrigin": [2, 5],
-      "startOrigin": [3, 4],
-      "thickness": 20
+      "solvedOrigin": [1, 1],
+      "startOrigin": [4, 1],
+      "thickness": 17
     },
     {
       "id": "z4",
@@ -91,9 +62,43 @@
         [1, 1],
         [2, 1]
       ],
-      "solvedOrigin": [3, 2],
-      "startOrigin": [4, 1],
+      "solvedOrigin": [1, 3],
+      "startOrigin": [1, 4],
       "thickness": 16
+    },
+    {
+      "id": "i4-b",
+      "cells": [
+        [0, 0],
+        [1, 0],
+        [2, 0],
+        [3, 0]
+      ],
+      "solvedOrigin": [2, 0],
+      "startOrigin": [0, 0],
+      "thickness": 16
+    },
+    {
+      "id": "l3-a",
+      "cells": [
+        [0, 0],
+        [1, 0],
+        [1, 1]
+      ],
+      "solvedOrigin": [3, 1],
+      "startOrigin": [5, 0],
+      "thickness": 20
+    },
+    {
+      "id": "i3",
+      "cells": [
+        [0, 0],
+        [1, 0],
+        [2, 0]
+      ],
+      "solvedOrigin": [3, 3],
+      "startOrigin": [4, 3],
+      "thickness": 15
     },
     {
       "id": "l3-b",
@@ -102,40 +107,27 @@
         [0, 1],
         [1, 1]
       ],
-      "solvedOrigin": [3, 3],
-      "startOrigin": [3, 1],
+      "solvedOrigin": [4, 4],
+      "startOrigin": [4, 4],
       "thickness": 20
     },
     {
-      "id": "l3-c",
+      "id": "domino",
       "cells": [
         [0, 0],
-        [1, 0],
-        [1, 1]
+        [0, 1]
       ],
-      "solvedOrigin": [4, 1],
-      "startOrigin": [5, 0],
-      "thickness": 20
+      "solvedOrigin": [5, 1],
+      "startOrigin": [6, 5],
+      "thickness": 14
     },
     {
-      "id": "t4",
-      "cells": [
-        [0, 1],
-        [1, 0],
-        [1, 1],
-        [1, 2]
-      ],
-      "solvedOrigin": [4, 4],
-      "startOrigin": [5, 4],
-      "thickness": 17
-    },
-    {
-      "id": "mono-b",
+      "id": "mono",
       "cells": [
         [0, 0]
       ],
-      "solvedOrigin": [4, 6],
-      "startOrigin": [5, 3],
+      "solvedOrigin": [5, 4],
+      "startOrigin": [5, 6],
       "thickness": 12
     }
   ]
