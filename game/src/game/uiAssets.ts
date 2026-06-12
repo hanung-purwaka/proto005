@@ -14,8 +14,6 @@ export const uiImageManifest: Record<string, string> = {
   [UI_TEXTURE_KEYS.progressTrack]: '/ui/progress-track.png',
   [UI_TEXTURE_KEYS.progressFill]: '/ui/progress-fill.png',
   [UI_TEXTURE_KEYS.timerPill]: '/ui/timer-pill.png',
-  [UI_TEXTURE_KEYS.buttonSquare]: '/ui/button-square.png',
-  [UI_TEXTURE_KEYS.buttonWide]: '/ui/button-wide.png',
   [UI_TEXTURE_KEYS.modalPanel]: '/ui/modal-panel.png',
   [UI_TEXTURE_KEYS.resetIcon]: '/ui/reset-icon.png',
 };

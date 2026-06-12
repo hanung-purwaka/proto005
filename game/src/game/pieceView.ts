@@ -3,6 +3,7 @@ import type { CompiledLevelData, CompiledPieceData } from '@shared/puzzle';
 
 export const PIECE_FACE_RADIUS = 16;
 export const PIECE_FACE_INSET = 1;
+export const PIECE_SHADOW_DEPTH = 20;
 
 interface OccupancyLookup {
   (row: number, col: number): string | null;
@@ -49,7 +50,7 @@ export class PieceView {
   private static readonly FACE_HIT_ALPHA_THRESHOLD = 72;
   private static readonly FACE_RADIUS = PIECE_FACE_RADIUS;
   private static readonly DEPTH_X = 0;
-  private static readonly DEPTH_Y = 5;
+  private static readonly DEPTH_Y = PIECE_SHADOW_DEPTH;
   private static readonly FACE_INSET = PIECE_FACE_INSET;
   private static readonly FACE_JOIN_OVERLAP = 3;
   private static readonly IMAGE_JOIN_BLEED = 2;

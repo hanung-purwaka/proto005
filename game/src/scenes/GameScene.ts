@@ -9,7 +9,7 @@ import {
   HEADER_Y,
   SNAP_TWEEN_MS,
 } from '@game/game/constants';
-import { PIECE_FACE_INSET, PIECE_FACE_RADIUS, PieceView } from '@game/game/pieceView';
+import { PIECE_FACE_INSET, PIECE_FACE_RADIUS, PIECE_SHADOW_DEPTH, PieceView } from '@game/game/pieceView';
 import { PuzzleBoard } from '@game/game/puzzleBoard';
 import { UI_TEXTURE_KEYS, UI_TEXTURE_SIZES } from '@game/game/uiAssets';
 import type { BoardMetrics, DragState, LevelSession } from '@game/game/runtimeTypes';
@@ -159,21 +159,29 @@ export class GameScene extends Phaser.Scene {
 
   private buildBoard(): void {
     const { originX, originY, boardWidth, boardHeight, cellSize } = this.boardMetrics;
+    const gridCellInset = 4;
+    const gridOriginY = originY + PIECE_SHADOW_DEPTH + gridCellInset;
 
     const grid = this.add.graphics();
 
     for (let row = 0; row < this.session.level.grid.rows; row += 1) {
       for (let col = 0; col < this.session.level.grid.cols; col += 1) {
         const x = originX + col * cellSize;
-        const y = originY + row * cellSize;
+        const y = gridOriginY + row * cellSize;
         grid.fillStyle(0xe4d8be, 0.86);
-        grid.fillRoundedRect(x + 4, y + 4, cellSize - 8, cellSize - 8, 12);
+        grid.fillRoundedRect(
+          x + gridCellInset,
+          y + gridCellInset,
+          cellSize - gridCellInset * 2,
+          cellSize - gridCellInset * 2,
+          12,
+        );
       }
     }
 
     const frame = this.add.graphics();
     frame.lineStyle(2, 0xe9dbc0, 0.5);
-    frame.strokeRoundedRect(originX - 6, originY - 6, boardWidth + 12, boardHeight + 12, 18);
+    frame.strokeRoundedRect(originX - 6, gridOriginY - 6, boardWidth + 12, boardHeight + 12, 18);
   }
 
   private buildPieces(): void {
