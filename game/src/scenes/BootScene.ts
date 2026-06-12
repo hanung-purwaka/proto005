@@ -6,6 +6,10 @@ const BUTTON_STROKE = 0x7c5f3c;
 const BUTTON_STROKE_WIDTH = 3;
 const TIMER_FILL = 0xebdfc7;
 const TIMER_RADIUS = 18;
+const MODAL_FILL = 0xf4e7cb;
+const MODAL_STROKE = 0xd7be92;
+const MODAL_STROKE_WIDTH = 3;
+const MODAL_RADIUS = 26;
 const RESTART_STROKE = 0x6a5035;
 const RESTART_STROKE_WIDTH = 4;
 
@@ -36,6 +40,11 @@ export class BootScene extends Phaser.Scene {
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.buttonWide].width,
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.buttonWide].height,
     );
+    this.createModalPanelTexture(
+      UI_TEXTURE_KEYS.modalPanel,
+      UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.modalPanel].width,
+      UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.modalPanel].height,
+    );
     this.createRestartIconTexture(
       UI_TEXTURE_KEYS.resetIcon,
       UI_TEXTURE_SIZES[UI_TEXTURE_KEYS.resetIcon].width,
@@ -61,6 +70,20 @@ export class BootScene extends Phaser.Scene {
 
     graphics.fillStyle(TIMER_FILL, 1);
     graphics.fillRoundedRect(0, 0, width, height, TIMER_RADIUS);
+    graphics.generateTexture(key, width, height);
+    graphics.destroy();
+  }
+
+  private createModalPanelTexture(key: string, width: number, height: number): void {
+    const graphics = this.make.graphics({ x: 0, y: 0 }, false);
+    const inset = MODAL_STROKE_WIDTH / 2;
+
+    graphics.fillStyle(0x000000, 0.08);
+    graphics.fillRoundedRect(0, 10, width, height - 10, MODAL_RADIUS);
+    graphics.fillStyle(MODAL_FILL, 1);
+    graphics.fillRoundedRect(0, 0, width, height - 10, MODAL_RADIUS);
+    graphics.lineStyle(MODAL_STROKE_WIDTH, MODAL_STROKE, 1);
+    graphics.strokeRoundedRect(inset, inset, width - MODAL_STROKE_WIDTH, height - 10 - MODAL_STROKE_WIDTH, MODAL_RADIUS);
     graphics.generateTexture(key, width, height);
     graphics.destroy();
   }

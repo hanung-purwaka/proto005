@@ -44,6 +44,12 @@ export class GameScene extends Phaser.Scene {
   private solvedReveal?: Phaser.GameObjects.Container;
   private finishedResult?: ResultState;
 
+  private changeLevel(levelId: string): void {
+    this.input.enabled = false;
+    this.timerEvent?.remove(false);
+    this.scene.start('game', { levelId });
+  }
+
   constructor() {
     super('game');
   }
@@ -146,7 +152,7 @@ export class GameScene extends Phaser.Scene {
     }).setOrigin(0.5);
 
     const resetButton = this.buildIconButton(GAME_WIDTH - 64, 122, () => {
-      this.scene.restart({ levelId: this.session.level.id });
+      this.changeLevel(this.session.level.id);
     });
     resetButton.setDepth(10);
 
@@ -619,7 +625,7 @@ export class GameScene extends Phaser.Scene {
     const nextLevel = isWin ? this.getNextLevel() : null;
     const buttonLabel = isWin ? (nextLevel ? 'Next Level' : 'Play Again') : 'Try Again';
     const button = this.buildWideButton(GAME_WIDTH / 2, GAME_HEIGHT / 2 + 64, buttonLabel, () => {
-      this.scene.restart({ levelId: nextLevel?.id ?? this.session.level.id });
+      this.changeLevel(nextLevel?.id ?? this.session.level.id);
     });
 
     container.add([scrim, panel, title, body, button]);
@@ -903,9 +909,12 @@ export class GameScene extends Phaser.Scene {
     );
     container.on('pointerdown', () => {
       visuals.setY(2);
+    });
+    container.on('pointerup', () => {
+      visuals.setY(0);
+      container.disableInteractive();
       onPress();
     });
-    container.on('pointerup', () => visuals.setY(0));
     container.on('pointerout', () => visuals.setY(0));
 
     return container;
@@ -944,9 +953,12 @@ export class GameScene extends Phaser.Scene {
     );
     container.on('pointerdown', () => {
       visuals.setY(2);
+    });
+    container.on('pointerup', () => {
+      visuals.setY(0);
+      container.disableInteractive();
       onPress();
     });
-    container.on('pointerup', () => visuals.setY(0));
     container.on('pointerout', () => visuals.setY(0));
 
     return container;

@@ -13,7 +13,6 @@ export const uiImageManifest: Record<string, string> = {
   [UI_TEXTURE_KEYS.preloadCard]: '/ui/preload-card.png',
   [UI_TEXTURE_KEYS.progressTrack]: '/ui/progress-track.png',
   [UI_TEXTURE_KEYS.progressFill]: '/ui/progress-fill.png',
-  [UI_TEXTURE_KEYS.modalPanel]: '/ui/modal-panel.png',
 };
 
 export const UI_TEXTURE_SIZES = {
