@@ -29,7 +29,8 @@ type RevealCell = {
 export class GameScene extends Phaser.Scene {
   private static readonly DRAG_COLLISION_EPSILON = 0.0001;
   private static readonly DRAG_COLLISION_STEPS = 12;
-  private static readonly DRAG_COLLISION_INSET = 0.08;
+  // Keep a small cushion during drag preview so chunky piece edges do not feel sticky.
+  private static readonly DRAG_COLLISION_INSET = 0.12;
 
   private board!: PuzzleBoard;
   private boardMetrics!: BoardMetrics;
